@@ -1,0 +1,736 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="icon" href="assets/img/brand/lion.svg" type="image/svg+xml">
+<title>James &amp; Cranwell</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="James &amp; Cranwell: executive search, strategic advisory and brand expansion for luxury hospitality, retail, food and beverage and lifestyle. London and Dubai, since 2016.">
+<link rel="preload" as="font" type="font/woff2" href="assets/fonts/eb-garamond.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="assets/fonts/jost.woff2" crossorigin>
+<link rel="preload" as="image" href="assets/video/poster-v4.webp" imagesrcset="assets/video/poster-m-v4.webp 800w, assets/video/poster-v4.webp 1600w" imagesizes="100vw" fetchpriority="high">
+<style>
+/* Fonts: self-hosted Latin subsets (variable weight) */
+@font-face{font-family:"EB Garamond";font-style:normal;font-weight:400 600;font-display:swap;src:url(assets/fonts/eb-garamond.woff2) format("woff2");unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+@font-face{font-family:"EB Garamond";font-style:italic;font-weight:400 600;font-display:swap;src:url(assets/fonts/eb-garamond-italic.woff2) format("woff2");unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+@font-face{font-family:"Jost";font-style:normal;font-weight:300 600;font-display:swap;src:url(assets/fonts/jost.woff2) format("woff2");unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+/* Layout: a private-club sequence. Dark green entrance (film in an arch), bone reading rooms, green library footer. One brass accent. */
+:root{
+  --green:#0E2620;       /* house colour */
+  --green-2:#163A31;     /* raised surface on green */
+  --bone:#EEE7DB;        /* paper */
+  --bone-2:#E3D9C8;      /* paper, shaded */
+  --brass:#B08A55;       /* the single accent */
+  --brass-lt:#D2B282;    /* brass on green */
+  --brass-ink:#7D5E32;   /* brass for small text on bone */
+  --ink:#1D2320;         /* graphite text */
+  --ink-2:#56605A;       /* quiet text on bone */
+  --mist:#B9C4BC;        /* quiet text on green */
+  --line-bone:rgba(29,35,32,.14);
+  --line-green:rgba(238,231,219,.16);
+
+  --f-display:"EB Garamond","Garamond","Georgia",serif;
+  --f-body:"Jost","Helvetica Neue",Arial,system-ui,sans-serif;
+
+  --ease:cubic-bezier(.16,1,.3,1);   /* expo out: every move uses it */
+  --t1:.6s; --t2:.9s; --t3:1.4s;
+
+  --gutter:max(16px,env(safe-area-inset-left,0px));
+  --gutter-r:max(16px,env(safe-area-inset-right,0px));
+  --wrap:1320px;
+  color-scheme:light;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+html.lenis,html.lenis body{height:auto}
+.lenis.lenis-smooth{scroll-behavior:auto!important}
+body{margin:0;background:var(--bone);color:var(--ink);font-family:var(--f-body);font-size:18px;line-height:1.7;letter-spacing:.005em;font-weight:400;-webkit-font-smoothing:antialiased;overflow-x:clip}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--green)}
+img,video{display:block;max-width:100%}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--brass);outline-offset:3px;border-radius:2px}
+.sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+.skip{position:fixed;left:var(--gutter);top:calc(env(safe-area-inset-top,0px) + 8px);z-index:100;background:var(--bone);color:var(--ink);padding:10px 16px;transform:translateY(-200%);transition:transform var(--t1) var(--ease)}
+.skip:focus{transform:none}
+
+.wrap{max-width:var(--wrap);margin-inline:auto;padding-left:var(--gutter);padding-right:var(--gutter-r)}
+.label{font-family:var(--f-body);font-size:12px;font-weight:500;letter-spacing:.22em;text-transform:uppercase}
+.display{font-family:var(--f-display);font-weight:400;font-optical-sizing:auto;letter-spacing:-.01em;line-height:1.02;text-wrap:balance;margin:0}
+h2.display{font-size:clamp(40px,6.2vw,92px)}
+h3{font-family:var(--f-display);font-weight:400;font-size:clamp(28px,3vw,40px);line-height:1.1;letter-spacing:-.01em;margin:0;text-wrap:balance}
+p{margin:0;max-width:62ch}
+.on-green{background:var(--green);color:var(--bone)}
+.on-green .quiet{color:var(--mist)}
+.quiet{color:var(--ink-2)}
+
+/* Buttons */
+.btn{--bg:var(--brass);--fg:var(--green);display:inline-flex;align-items:center;gap:14px;padding:16px 26px;border:0;border-radius:999px;background:var(--bg);color:var(--fg);font:500 13px/1 var(--f-body);letter-spacing:.18em;text-transform:uppercase;text-decoration:none;cursor:pointer;transition:background var(--t1) var(--ease),color var(--t1) var(--ease);will-change:transform}
+.btn:hover{--bg:var(--brass-lt)}
+.btn svg{width:16px;height:16px;transition:transform var(--t1) var(--ease)}
+.btn:hover svg{transform:translateX(4px)}
+.btn--ghost{--bg:transparent;--fg:currentColor;box-shadow:inset 0 0 0 1px currentColor}
+.btn--ghost:hover{--bg:transparent;color:var(--brass-lt)}
+.link{display:inline-flex;gap:10px;align-items:center;text-decoration:none;font:500 13px/1 var(--f-body);letter-spacing:.18em;text-transform:uppercase;padding-bottom:6px;background:linear-gradient(currentColor,currentColor) 0 100%/100% 1px no-repeat;transition:background-size var(--t2) var(--ease)}
+.link:hover{background-size:0 1px;background-position:100% 100%}
+
+/* ---------- Loader ---------- */
+
+/* ---------- Header ---------- */
+.hdr{position:fixed;inset:env(safe-area-inset-top,0px) 0 auto;z-index:50;color:var(--bone);transition:background var(--t2) var(--ease),color var(--t2) var(--ease),transform var(--t2) var(--ease)}
+.hdr .wrap{display:flex;align-items:center;justify-content:space-between;gap:24px;height:84px}
+.hdr.is-solid{background:rgba(14,38,32,.92);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px)}
+.hdr.is-hidden{transform:translateY(-110%)}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+.brand img{height:34px;width:auto}
+.brand-word{font:400 19px/1 var(--f-display);letter-spacing:.24em;text-transform:uppercase;white-space:nowrap}
+.nav{display:flex;gap:34px;align-items:center}
+.nav a{text-decoration:none;font-size:13px;font-weight:500;letter-spacing:.2em;text-transform:uppercase;opacity:.86;position:relative;padding-block:6px}
+.nav a::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;background:currentColor;transform:scaleX(0);transform-origin:right;transition:transform var(--t2) var(--ease)}
+.nav a:hover{opacity:1}
+.nav a:hover::after{transform:scaleX(1);transform-origin:left}
+.menu-btn{display:none;background:none;border:0;color:inherit;padding:10px;margin-right:-10px;cursor:pointer}
+.menu-btn span{display:block;width:26px;height:1px;background:currentColor;transition:transform var(--t1) var(--ease)}
+.menu-btn span+span{margin-top:7px}
+.menu-btn[aria-expanded="true"] span:first-child{transform:translateY(4px) rotate(45deg)}
+.menu-btn[aria-expanded="true"] span:last-child{transform:translateY(-4px) rotate(-45deg)}
+.drawer{position:fixed;inset:0;z-index:45;background:var(--green);color:var(--bone);display:flex;flex-direction:column;justify-content:center;padding:100px var(--gutter-r) 40px var(--gutter);clip-path:inset(0 0 100% 0);transition:clip-path var(--t2) var(--ease);visibility:hidden}
+.drawer.is-open{clip-path:inset(0 0 0 0);visibility:visible}
+.drawer a{font:400 clamp(38px,10vw,64px)/1.15 var(--f-display);text-decoration:none;display:block}
+.drawer .label{margin-top:40px;color:var(--mist)}
+
+/* ---------- Hero / aperture ---------- */
+.hero{position:relative;background:var(--green);color:var(--bone)}
+.hero-stage{position:relative;height:100svh;min-height:620px;overflow:hidden}
+.hero-pin{position:relative;height:100%}
+.aperture{position:absolute;inset:0;clip-path:inset(13% 6% 9% 56% round 2000px 2000px 0px 0px);will-change:clip-path}
+.aperture .film{position:absolute;inset:0}
+.aperture video,.aperture img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+/* the poster sits above the film and fades only once the film has drawn its first frame */
+.aperture img{z-index:1}
+.aperture::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(14,38,32,.35),rgba(14,38,32,0) 30%,rgba(14,38,32,.55));pointer-events:none}
+.hero-copy{position:absolute;inset:auto 0 0;padding-bottom:clamp(28px,6vh,64px);z-index:2}
+.hero h1{text-shadow:0 2px 48px rgba(14,38,32,.5);font-family:var(--f-display);font-weight:400;font-size:clamp(38px,4.7vw,84px);line-height:1.04;letter-spacing:-.012em;margin:0;max-width:50vw;text-wrap:balance}
+.hero h1 em{font-style:italic;color:var(--brass-lt)}
+.hero h1 .ln{display:block;overflow:hidden;padding-bottom:.06em;margin-bottom:-.06em}
+.hero h1 .ln>span{display:block}
+.hero-meta{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-top:28px;flex-wrap:wrap}
+.hero-meta p{color:var(--mist);max-width:42ch;font-size:16px}
+.scroll-cue{display:flex;align-items:center;gap:12px;color:var(--mist)}
+.scroll-cue i{display:block;width:1px;height:46px;background:linear-gradient(var(--brass-lt),transparent);transform-origin:top;animation:cue 2.4s var(--ease) infinite}
+@keyframes cue{0%{transform:scaleY(0)}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+.hero-side{position:absolute;top:calc(84px + 8vh);left:0;right:0;z-index:2;color:var(--mist)}
+.hero-side .wrap{display:flex;justify-content:space-between}
+/* Wordmark: the payoff of the opening arch. It rises into the centre of the full-bleed film over a soft radial scrim. */
+.wm-scrim{position:absolute;inset:0;background:radial-gradient(ellipse 62% 46% at 50% 52%,rgba(14,38,32,.62),rgba(14,38,32,0) 72%);opacity:0;pointer-events:none}
+.hero-wm{position:absolute;inset:0;z-index:3;display:grid;place-items:center;text-align:center;pointer-events:none;color:var(--bone);font:400 clamp(56px,9.6vw,176px)/1 var(--f-display);letter-spacing:-.02em;white-space:nowrap;text-shadow:0 2px 40px rgba(14,38,32,.35)}
+.hero-wm .wm-w{display:inline-block;overflow:hidden;padding-bottom:.12em;margin-bottom:-.12em;vertical-align:bottom}
+.hero-wm .wm-w>span{display:inline-block}
+.hero-wm .wm-amp{display:inline-block;color:var(--brass-lt);font-style:italic;margin-inline:.04em}
+.motion .hero-wm{visibility:hidden}
+/* arrival starts from these states, so nothing flashes before the script runs (the .motion class is dropped if GSAP fails) */
+/* Arrival runs in CSS so it starts on first paint, not when the CDN scripts arrive; fill backwards so GSAP owns the styles afterwards */
+@keyframes jc-rise{from{transform:translateY(110%)}to{transform:none}}
+@keyframes jc-fade{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+@keyframes jc-settle{from{transform:scale(1.25)}to{transform:scale(1)}}
+.motion .hero h1 .ln>span{animation:jc-rise 1.4s var(--ease) .1s backwards}
+.motion .hero h1 .ln:nth-child(2)>span{animation-delay:.19s}
+.motion .hero h1 .ln:nth-child(3)>span{animation-delay:.28s}
+.motion .hero h1 .ln:nth-child(4)>span{animation-delay:.37s}
+.motion .aperture .film{animation:jc-settle 2.2s var(--ease) backwards}
+.motion .hero-meta{animation:jc-fade 1s var(--ease) .5s backwards}
+.motion .hero-side{animation:jc-fade 1s var(--ease) .58s backwards}
+.motion .hdr{animation:jc-fade 1s var(--ease) .5s backwards}
+html:not(.motion) .hero-wm,html:not(.motion) .wm-scrim{display:none}
+
+/* ---------- Statement + numbers ---------- */
+.statement{padding-block:clamp(96px,14vw,200px) clamp(72px,10vw,140px)}
+.statement .eyebrow{display:flex;gap:16px;align-items:center;color:var(--brass-ink);margin-bottom:36px}
+.statement .big{font-family:var(--f-display);font-size:clamp(30px,4.2vw,62px);line-height:1.14;letter-spacing:-.015em;max-width:24ch;text-wrap:balance}
+.motion .ink-dim .w{opacity:.16}
+.figures{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-top:clamp(64px,9vw,120px);border-top:1px solid var(--line-bone)}
+.fig{padding-top:28px;min-width:0}
+.fig b{display:block;font:400 clamp(56px,8vw,120px)/1 var(--f-display);letter-spacing:-.02em;font-variant-numeric:lining-nums tabular-nums}
+.fig b sup{font:300 .34em/1 var(--f-body);vertical-align:top;position:relative;top:.3em;color:var(--brass);margin-left:.06em}
+.fig>span{display:block;margin-top:14px;color:var(--ink-2)}
+
+/* ---------- Services chapters ---------- */
+.services{padding-block:clamp(80px,10vw,140px)}
+.sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:32px;flex-wrap:wrap;margin-bottom:clamp(48px,7vw,96px)}
+.sec-head .label{color:var(--brass-ink)}
+.chapters{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:clamp(32px,6vw,96px)}
+.ch-media{position:sticky;top:calc(84px + 4vh);height:calc(100svh - 84px - 8vh);min-height:460px}
+.ch-media figure{position:absolute;inset:0;margin:0;overflow:hidden;clip-path:inset(0 0 0 0 round 999px 999px 0 0)}
+.motion .ch-media figure+figure{clip-path:inset(100% 0 0 0 round 999px 999px 0 0)}
+.ch-media img{width:100%;height:118%;object-fit:cover;will-change:transform}
+.ch-media figcaption{position:absolute;left:24px;bottom:20px;color:var(--bone);z-index:1}
+.ch-media figure::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 60%,rgba(14,38,32,.6))}
+.ch-list{display:flex;flex-direction:column}
+.chapter h3{color:var(--green-2)}
+.chapter{min-height:calc(100svh - 84px);display:flex;flex-direction:column;justify-content:center;gap:24px;padding-block:48px;border-top:1px solid var(--line-bone)}
+.chapter:first-child{border-top:0}
+.chapter ul{list-style:none;margin:8px 0 0;padding:0;display:grid}
+.chapter li{color:var(--ink-2);padding-block:14px;border-top:1px solid var(--line-bone)}
+.chapter .mob-img{display:none}
+
+/* ---------- Clients ---------- */
+.clients{padding-block:clamp(88px,11vw,160px);overflow:hidden}
+.clients .sec-head .label{color:var(--brass-lt)}
+.marquee{--speed:60s;display:flex;overflow:hidden;mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent);-webkit-mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent)}
+.marquee+.marquee{margin-top:clamp(20px,3vw,40px)}
+.track{display:flex;flex:none;gap:clamp(40px,5vw,80px);padding-right:clamp(40px,5vw,80px);align-items:center;will-change:transform}
+.track{--lh:clamp(40px,4.4vw,62px)}
+.track img{height:var(--lh);width:auto;max-width:none;opacity:.7;transition:opacity var(--t1) var(--ease)}
+.track img:hover{opacity:1}
+.clients-foot{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:center;margin-top:clamp(56px,7vw,96px);padding-top:28px;border-top:1px solid var(--line-green)}
+.clients-foot p{color:var(--mist)}
+
+/* ---------- Testimonials ---------- */
+.voices{padding-block:clamp(96px,12vw,180px)}
+.voices .sec-head .label{color:var(--brass-ink)}
+.voice{margin:0;display:grid;grid-template-columns:minmax(0,220px) minmax(0,1fr);gap:clamp(28px,5vw,80px);padding-block:clamp(48px,6vw,88px);border-top:1px solid var(--line-bone);align-items:start}
+.voice:last-child{border-bottom:1px solid var(--line-bone)}
+.portrait{width:100%;max-width:220px;aspect-ratio:4/5;border-radius:50%;overflow:hidden;background:var(--bone-2)}
+.portrait img{width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.05);mix-blend-mode:multiply;transition:filter var(--t3) var(--ease),transform var(--t3) var(--ease)}
+.voice:hover .portrait img{filter:none;transform:scale(1.04)}
+.voice blockquote{margin:0}
+.voice blockquote p{font-family:var(--f-display);font-size:clamp(24px,2.9vw,44px);line-height:1.22;letter-spacing:-.012em;max-width:30ch;text-wrap:pretty}
+.voice blockquote p::before{content:"\201C";color:var(--brass);margin-left:-.42em;margin-right:.04em}
+.voice blockquote p::after{content:"\201D";color:var(--brass);margin-left:.04em}
+.voice footer{margin-top:28px;display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+.voice cite{font-style:normal}
+.voice cite b{display:block;font-weight:500}
+.voice cite span{color:var(--ink-2);font-size:15px}
+.voice .co{height:34px;width:auto;opacity:.75;filter:grayscale(1)}
+
+/* ---------- Insights ---------- */
+.insights{padding-block:0 clamp(96px,12vw,180px)}
+.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(20px,3vw,40px)}
+.card{text-decoration:none;display:flex;flex-direction:column;gap:22px}
+.card .im{aspect-ratio:1/1;overflow:hidden;border-radius:2px;background:var(--bone-2)}
+.card .im img{width:100%;height:100%;object-fit:cover;transition:transform var(--t3) var(--ease)}
+.card:hover .im img{transform:scale(1.05)}
+.card .meta{display:flex;justify-content:space-between;gap:16px;color:var(--brass-ink)}
+.card h3{transition:color var(--t1) var(--ease)}
+.card:hover h3{color:var(--green-2)}
+
+/* ---------- Enquire ---------- */
+.enquire{padding-block:clamp(96px,12vw,170px)}
+.enq{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(40px,7vw,120px)}
+.enq .label{color:var(--brass-lt)}
+.enq h2{margin-top:24px}
+.enq .intro p{color:var(--mist);margin-top:28px}
+form{display:grid;gap:28px;align-content:start}
+.field{display:grid;gap:8px;min-width:0}
+.field label{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--mist)}
+.field input,.field select,.field textarea{width:100%;background:transparent;border:0;border-bottom:1px solid var(--line-green);color:var(--bone);font:400 18px/1.4 var(--f-body);padding:10px 0 12px;border-radius:0;transition:border-color var(--t1) var(--ease)}
+.field select{appearance:none;-webkit-appearance:none;background-image:linear-gradient(45deg,transparent 50%,var(--brass-lt) 50%),linear-gradient(135deg,var(--brass-lt) 50%,transparent 50%);background-position:calc(100% - 12px) 55%,calc(100% - 6px) 55%;background-size:6px 6px;background-repeat:no-repeat}
+.field select option{color:var(--ink);background:var(--bone)}
+.field textarea{resize:vertical;min-height:96px}
+.field input:focus,.field select:focus,.field textarea:focus{outline:0;border-bottom-color:var(--brass-lt)}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.check{display:flex;gap:14px;align-items:flex-start;color:var(--mist);font-size:15px}
+.check input{accent-color:var(--brass);width:18px;height:18px;margin-top:3px;flex:none}
+.err{color:#E7B9A6;font-size:14px;min-height:1em}
+.thanks{display:none;font-family:var(--f-display);font-size:clamp(28px,3vw,40px);line-height:1.2}
+form.is-sent .field,form.is-sent .row2,form.is-sent .check,form.is-sent button{display:none}
+form.is-sent .thanks{display:block}
+
+/* ---------- Footer ---------- */
+.ftr{padding-block:clamp(72px,9vw,120px) 32px;border-top:1px solid var(--line-green)}
+.ftr-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:40px}
+.ftr h3{font:500 12px/1 var(--f-body);letter-spacing:.22em;text-transform:uppercase;color:var(--brass-lt);margin:0 0 22px}
+.ftr ul{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.ftr a{text-decoration:none;color:var(--mist);transition:color var(--t1) var(--ease)}
+.ftr a:hover{color:var(--bone)}
+.office{display:grid;gap:6px;color:var(--mist);font-size:15px}
+.office b{color:var(--bone);font:400 26px/1.1 var(--f-display)}
+.clock{font-variant-numeric:tabular-nums;color:var(--brass-lt);letter-spacing:.08em;font-size:14px}
+.ftr-big{font:400 clamp(40px,10.6vw,176px)/.9 var(--f-display);letter-spacing:-.025em;margin-top:clamp(64px,9vw,120px);white-space:nowrap;color:var(--bone);opacity:.95}
+.ftr-big em{color:var(--brass-lt)}
+.credit a{color:inherit;text-decoration:none;text-underline-offset:3px}
+.credit a:hover,.credit a:focus-visible{text-decoration:underline}
+.ftr-base{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;margin-top:40px;padding-top:24px;border-top:1px solid var(--line-green);color:var(--mist);font-size:14px}
+.news{display:flex;border-bottom:1px solid var(--line-green);margin-top:8px}
+.news input{flex:1;min-width:0;background:none;border:0;color:var(--bone);font:400 16px var(--f-body);padding:12px 0}
+.news input:focus{outline:0}
+.news button{background:none;border:0;color:var(--brass-lt);cursor:pointer;padding:0 4px}
+.news button svg{width:20px;height:20px}
+
+/* ---------- Cursor ---------- */
+.cursor{position:fixed;left:0;top:0;z-index:80;width:84px;height:84px;margin:-42px 0 0 -42px;border-radius:50%;background:var(--brass);color:var(--green);display:grid;place-items:center;font:500 11px var(--f-body);letter-spacing:.2em;text-transform:uppercase;pointer-events:none;transform:scale(0);opacity:0}
+
+/* ---------- Responsive ---------- */
+@media (max-width:980px){
+  .nav,.hdr .btn{display:none}
+  .menu-btn{display:block}
+  .chapters{grid-template-columns:1fr}
+  .ch-media{display:none}
+  .chapter{min-height:0;padding-block:40px}
+  .chapter .mob-img{display:block;aspect-ratio:4/5;overflow:hidden;border-radius:999px 999px 0 0}
+  .chapter .mob-img img{width:100%;height:100%;object-fit:cover}
+  .enq{grid-template-columns:1fr}
+  .ftr-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:640px){
+  body{font-size:16px}
+  .aperture{clip-path:inset(12% 16% 57% 16% round 2000px 2000px 0px 0px)}
+  .hero h1{max-width:none;font-size:clamp(34px,10vw,44px)}
+  .figures{grid-template-columns:1fr;gap:0}
+  .fig{padding-block:24px;border-bottom:1px solid var(--line-bone)}
+  .voice{grid-template-columns:1fr}
+  .portrait{max-width:132px}
+  .cards{grid-template-columns:1fr}
+  .row2{grid-template-columns:1fr}
+  .ftr-grid{grid-template-columns:1fr}
+  .hero-side{display:none}
+  .hero-wm{font-size:clamp(52px,18vw,88px);line-height:1.02}
+  .hero-wm .wm-l{display:block}
+  .brand-word{font-size:15px;letter-spacing:.18em}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+  .aperture{clip-path:none!important}
+  .statement .big .w,.voice .w{opacity:1!important}
+  .ch-media figure+figure{clip-path:inset(0 0 0 0)}
+}
+</style>
+<script>(function(d){d.classList.add('js');if(!matchMedia('(prefers-reduced-motion: reduce)').matches)d.classList.add('motion');})(document.documentElement)</script>
+
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="hdr" id="hdr">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="James &amp; Cranwell, home">
+      <img src="assets/img/brand/lion.svg" alt="" width="50" height="40" data-logo>
+      <span class="brand-word">James &amp; Cranwell</span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#clients">Clients</a>
+      <a href="#insights">Insights</a>
+    </nav>
+    <a class="btn btn--ghost" href="#enquire" data-magnetic>Enquire</a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="drawer" aria-label="Open menu"><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="drawer" id="drawer" inert>
+  <a href="#about">About</a>
+  <a href="#services">Services</a>
+  <a href="#clients">Clients</a>
+  <a href="#insights">Insights</a>
+  <a href="#enquire">Enquire</a>
+  <p class="label">London · Dubai</p>
+</div>
+
+<main id="main">
+  <section class="hero" id="top" aria-labelledby="hero-title">
+    <div class="hero-stage">
+      <div class="hero-pin">
+        <div class="aperture" id="aperture">
+          <div class="film"><img src="assets/video/poster-v4.webp" srcset="assets/video/poster-m-v4.webp 800w, assets/video/poster-v4.webp 1600w" sizes="100vw" alt="" width="1600" height="900" fetchpriority="high" id="poster">
+          <video id="film" muted playsinline loop preload="none" aria-hidden="true" tabindex="-1"></video></div>
+          <div class="wm-scrim"></div>
+        </div>
+        <div class="hero-wm" aria-hidden="true"><div><span class="wm-l"><span class="wm-w"><span>James</span></span></span> <span class="wm-l"><span class="wm-amp">&amp;</span> <span class="wm-w"><span>Cranwell</span></span></span></div></div>
+        <div class="hero-side label" aria-hidden="true"><div class="wrap"><span>Est. 2016</span><span>London · Dubai</span></div></div>
+        <div class="hero-copy">
+          <div class="wrap">
+            <h1 id="hero-title" class="split-lines"><span class="ln"><span>Elevating luxury</span></span><span class="ln"><span>through <em>exceptional</em></span></span><span class="ln"><span>talent and timeless</span></span><span class="ln"><span>connections.</span></span></h1>
+            <div class="hero-meta">
+              <p>Executive search, strategic advisory and brand expansion for luxury hospitality, retail, food and beverage and lifestyle brands.</p>
+              <span class="scroll-cue label" aria-hidden="true"><i></i>Scroll</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="statement" id="about" aria-labelledby="about-title">
+    <div class="wrap">
+      <p class="eyebrow label" id="about-title">About James &amp; Cranwell</p>
+      <p class="big ink-words">Since 2016, we have placed senior leaders with luxury hotels, restaurants, fashion houses and members' clubs. We work from London and Dubai, for clients in more than 40 countries.</p>
+      <div class="figures" role="list">
+        <div class="fig" role="listitem"><b><span data-count="430">430</span><sup>+</sup></b><span>Leadership placements in the last three years</span></div>
+        <div class="fig" role="listitem"><b><span data-count="100">100</span><sup>+</sup></b><span>Clients across luxury hospitality, retail and lifestyle</span></div>
+        <div class="fig" role="listitem"><b><span data-count="40">40</span><sup>+</sup></b><span>Countries, across the USA, Europe, the Middle East and Asia</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="services" id="services" aria-labelledby="services-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><p class="label">What we do</p><h2 class="display" id="services-title" style="margin-top:20px">Our services.</h2></div>
+        <a class="link" href="#enquire">Enquire</a>
+      </div>
+      <div class="chapters">
+        <div class="ch-media" aria-hidden="true">
+          <figure><img src="assets/img/services/executive-search-front.webp" alt="" width="1200" height="904" loading="lazy" data-parallax></figure>
+          <figure><img src="assets/img/services/strategic-advisory-front.webp" alt="" width="736" height="1308" loading="lazy" data-parallax></figure>
+          <figure><img src="assets/img/services/brand-expansion-front.webp" alt="" width="896" height="1152" loading="lazy" data-parallax></figure>
+        </div>
+        <div class="ch-list">
+          <article class="chapter">
+            <div class="mob-img"><img src="assets/img/services/executive-search-front.webp" alt="" width="1200" height="904" loading="lazy"></div>
+            <h3>Executive Search</h3>
+            <p class="quiet">We place senior leaders and operations professionals with luxury hotels, restaurants, fashion houses and private members' clubs. Many of the people we introduce are not on the open market.</p>
+            <ul><li>C-suite and general manager appointments</li><li>Pre-opening and operations leadership</li><li>Confidential and off-market searches</li></ul>
+          </article>
+          <article class="chapter">
+            <div class="mob-img"><img src="assets/img/services/strategic-advisory-front.webp" alt="" width="736" height="1308" loading="lazy"></div>
+            <h3>Strategic Advisory</h3>
+            <p class="quiet">We advise owners, developers and landlords on positioning and brand partnerships for integrated developments, venues, hotels, resorts and commercial spaces.</p>
+            <ul><li>Concept and positioning</li><li>Operator and brand partnerships</li><li>Tenant mix for destination developments</li></ul>
+          </article>
+          <article class="chapter">
+            <div class="mob-img"><img src="assets/img/services/brand-expansion-front.webp" alt="" width="896" height="1152" loading="lazy"></div>
+            <h3>Brand Expansion</h3>
+            <p class="quiet">We help international brands enter new markets, from restaurants and hotels to spas, retail and fashion. We cover site sourcing and feasibility through to deal negotiation and the relationship after signing.</p>
+            <ul><li>Market entry and site sourcing</li><li>Feasibility and deal negotiation</li><li>Post-signing relationship management</li></ul>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="clients on-green" id="clients" aria-labelledby="clients-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><p class="label">Clients</p><h2 class="display" id="clients-title" style="margin-top:20px">Appointed by the leading<br>names in luxury.</h2></div>
+      </div>
+    </div>
+    <div class="marquee" data-dir="-1" aria-hidden="true"><div class="track" id="trackA"></div></div>
+    <div class="marquee" data-dir="1" aria-hidden="true"><div class="track" id="trackB"></div></div>
+    <ul class="sr-only" id="client-list" aria-label="Selected clients"></ul>
+    <div class="wrap">
+      <div class="clients-foot">
+        <p>More than 100 clients across hotels, restaurants, fashion and members' clubs.</p>
+        <a class="link" href="#voices">Read testimonials</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="voices" id="voices" aria-labelledby="voices-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><p class="label">Testimonials</p><h2 class="display" id="voices-title" style="margin-top:20px">What our clients say.</h2></div>
+      </div>
+      <div id="voice-list"></div>
+    </div>
+  </section>
+
+  <section class="insights" id="insights" aria-labelledby="insights-title">
+    <div class="wrap">
+      <div class="sec-head">
+        <div><p class="label">Insights</p><h2 class="display" id="insights-title" style="margin-top:20px">Executive moves<br>and industry news.</h2></div>
+        <a class="link" href="https://jamesandcranwell.com/insights/" target="_blank" rel="noopener">All insights</a>
+      </div>
+      <div class="cards">
+        <a class="card" href="https://jamesandcranwell.com/insights/" target="_blank" rel="noopener" data-cursor="Read">
+          <div class="im"><img src="assets/img/insights/vincent-billiard-cheval-blanc.webp" alt="" width="1080" height="1080" loading="lazy"></div>
+          <div class="meta label"><span>Executive Moves</span><span>Cheval Blanc · Givenchy</span></div>
+          <h3>Vincent Billiard joins Cheval Blanc as COO, and Nicky Grays becomes Global HR Director at Givenchy</h3>
+        </a>
+        <a class="card" href="https://jamesandcranwell.com/insights/#world-of-luxury" target="_blank" rel="noopener" data-cursor="Read">
+          <div class="im"><img src="assets/img/insights/aman-novak-djokovic.webp" alt="" width="1080" height="1080" loading="lazy"></div>
+          <div class="meta label"><span>Inside the world of luxury</span><span>Aman</span></div>
+          <h3>Aman and Novak Djokovic launch a wellness retreat at Amanjena, Morocco</h3>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="enquire on-green" id="enquire" aria-labelledby="enq-title">
+    <div class="wrap enq">
+      <div class="intro">
+        <p class="label">Contact</p>
+        <h2 class="display" id="enq-title">Get in <em style="color:var(--brass-lt)">touch.</em></h2>
+        <p>Tell us about the role you are hiring for or the project you are planning, and a member of the team will reply.</p>
+        <p style="margin-top:20px"><span class="quiet">Or write to</span> <a href="mailto:enquiry@jamesandcranwell.com" style="color:var(--bone)">enquiry@jamesandcranwell.com</a></p>
+      </div>
+      <form id="enq-form" novalidate>
+        <div class="row2">
+          <div class="field"><label for="f-name">Name</label><input id="f-name" name="name" autocomplete="name" required></div>
+          <div class="field"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" required></div>
+        </div>
+        <div class="row2">
+          <div class="field"><label for="f-company">Company</label><input id="f-company" name="company" autocomplete="organization"></div>
+          <div class="field"><label for="f-service">Service</label>
+            <select id="f-service" name="service"><option>Executive Search</option><option>Strategic Advisory</option><option>Brand Expansion</option><option>Other</option></select>
+          </div>
+        </div>
+        <div class="field"><label for="f-msg">How can we help?</label><textarea id="f-msg" name="message" rows="3"></textarea></div>
+        <label class="check" for="f-consent"><input id="f-consent" type="checkbox" name="consent">I'd like to receive occasional news and insights from James &amp; Cranwell.</label>
+        <p class="err" id="f-err" role="alert"></p>
+        <div><button class="btn" type="submit" data-magnetic>Send enquiry</button></div>
+        <p class="thanks" role="status">Thank you. We will be in touch.</p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="ftr on-green">
+  <div class="wrap">
+    <div class="ftr-grid">
+      <div>
+        <h3>Sign up for the latest in luxury</h3>
+        <form class="news" id="news-form" novalidate>
+          <label for="n-email" class="sr-only">Email address</label>
+          <input id="n-email" type="email" placeholder="Your email" autocomplete="email">
+          <button type="submit" aria-label="Subscribe"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" aria-hidden="true"><path d="M1 8h13M9 3l5 5-5 5"/></svg></button>
+        </form>
+      </div>
+      <div class="office">
+        <h3>Europe</h3>
+        <b>London</b>
+        <span>10 York Road, London SE1 7ND</span>
+        <span class="clock" data-tz="Europe/London" aria-label="Local time in London">--:--</span>
+      </div>
+      <div class="office">
+        <h3>Middle East</h3>
+        <b>Dubai</b>
+        <span>The Place, B1 Mall, Al Barsha First</span>
+        <span class="clock" data-tz="Asia/Dubai" aria-label="Local time in Dubai">--:--</span>
+      </div>
+      <div>
+        <h3>Email</h3>
+        <ul>
+          <li><a href="mailto:enquiry@jamesandcranwell.com">enquiry@jamesandcranwell.com</a></li>
+          <li><a href="https://www.linkedin.com/company/james-cranwell/">LinkedIn</a></li>
+          <li><a href="https://www.instagram.com/jamesandcranwell/">Instagram</a></li>
+          <li><a href="https://jamesandcranwell.com/privacy-policy/">Privacy policy</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="ftr-big" aria-hidden="true">James <em>&amp;</em> Cranwell</div>
+    <div class="ftr-base"><span>© <span id="yr">2026</span> James &amp; Cranwell</span><span>Executive search · Strategic advisory · Brand expansion</span><span class="credit">Designed &amp; built by <a href="https://onthegroundproductions.com/" target="_blank" rel="noopener">On The Ground</a></span></div>
+  </div>
+</footer>
+
+<div class="cursor" aria-hidden="true" id="cursor">View</div>
+
+<script id="jc-data">window.JC_CLIENTS=[{"file": "mandarin-oriental.webp", "brand": "Mandarin Oriental", "width": 177, "height": 120}, {"file": "zuma.webp", "brand": "Zuma", "width": 420, "height": 109}, {"file": "annabels.webp", "brand": "Annabel's", "width": 106, "height": 120}, {"file": "bottega-veneta.webp", "brand": "Bottega Veneta", "width": 348, "height": 120}, {"file": "rosewood-hotel-group.webp", "brand": "Rosewood Hotel Group", "width": 420, "height": 102}, {"file": "casa-cipriani.webp", "brand": "Casa Cipriani", "width": 228, "height": 120}, {"file": "belmond.webp", "brand": "Belmond", "width": 420, "height": 56}, {"file": "langosteria.webp", "brand": "Langosteria", "width": 420, "height": 71}, {"file": "four-seasons.webp", "brand": "Four Seasons", "width": 211, "height": 120}, {"file": "dorchester-collection.webp", "brand": "Dorchester Collection", "width": 200, "height": 120}, {"file": "bulgari-hotels-and-resorts.webp", "brand": "Bulgari Hotels \u0026 Resorts", "width": 420, "height": 80}, {"file": "the-peninsula-hotels.webp", "brand": "The Peninsula Hotels", "width": 420, "height": 93}, {"file": "nobu.webp", "brand": "Nobu", "width": 394, "height": 120}, {"file": "daniel-boulud.webp", "brand": "Daniel Boulud", "width": 292, "height": 120}, {"file": "wynn-resorts.webp", "brand": "Wynn Resorts", "width": 250, "height": 120}, {"file": "raffles.webp", "brand": "Raffles", "width": 205, "height": 120}, {"file": "the-french-laundry.webp", "brand": "The French Laundry", "width": 420, "height": 91}, {"file": "one-and-only.webp", "brand": "One\u0026Only", "width": 420, "height": 117}, {"file": "estiatorio-milos.webp", "brand": "Estiatorio Milos", "width": 243, "height": 120}, {"file": "six-senses.webp", "brand": "Six Senses", "width": 174, "height": 120}, {"file": "claridges.webp", "brand": "Claridge's", "width": 306, "height": 120}, {"file": "atlantis-the-royal.webp", "brand": "Atlantis The Royal", "width": 288, "height": 120}, {"file": "the-arts-club.webp", "brand": "The Arts Club", "width": 209, "height": 120}, {"file": "thomas-keller.webp", "brand": "Thomas Keller", "width": 420, "height": 39}, {"file": "unknown-25.webp", "brand": "unknown", "width": 96, "height": 120}, {"file": "lpm-restaurant-and-bar.webp", "brand": "LPM Restaurant \u0026 Bar", "width": 182, "height": 120}, {"file": "corinthia-hotels.webp", "brand": "Corinthia Hotels", "width": 249, "height": 120}, {"file": "the-connaught.webp", "brand": "The Connaught", "width": 420, "height": 120}, {"file": "coya.webp", "brand": "Coya", "width": 94, "height": 120}, {"file": "restaurant-and-bar-design-awards.webp", "brand": "Restaurant \u0026 Bar Design Awards", "width": 420, "height": 108}, {"file": "w-hotels.webp", "brand": "W Hotels", "width": 145, "height": 120}, {"file": "soho-house.webp", "brand": "Soho House", "width": 193, "height": 120}, {"file": "oetker-hotels.webp", "brand": "Oetker Hotels", "width": 420, "height": 97}, {"file": "wolfgang-puck.webp", "brand": "Wolfgang Puck", "width": 276, "height": 120}, {"file": "the-ritz-carlton.webp", "brand": "The Ritz-Carlton", "width": 169, "height": 120}, {"file": "chiltern-firehouse.webp", "brand": "Chiltern Firehouse", "width": 309, "height": 120}, {"file": "delilah.webp", "brand": "Delilah", "width": 161, "height": 120}, {"file": "hwood-group.webp", "brand": "h.wood Group", "width": 420, "height": 91}, {"file": "chateau-marmont.webp", "brand": "Chateau Marmont", "width": 122, "height": 120}, {"file": "starr-restaurants.webp", "brand": "Starr Restaurants", "width": 254, "height": 120}, {"file": "pastis.webp", "brand": "Pastis", "width": 301, "height": 120}, {"file": "caesars-palace.webp", "brand": "Caesars Palace", "width": 169, "height": 120}, {"file": "chez-margaux.webp", "brand": "Chez Margaux", "width": 94, "height": 120}, {"file": "st-regis.webp", "brand": "St. Regis", "width": 420, "height": 115}, {"file": "adare-manor.webp", "brand": "Adare Manor", "width": 91, "height": 120}, {"file": "velaa-private-island.webp", "brand": "Velaa Private Island", "width": 160, "height": 120}, {"file": "gaia.webp", "brand": "Gaia", "width": 170, "height": 120}, {"file": "catch-hospitality-group.webp", "brand": "Catch Hospitality Group", "width": 118, "height": 120}, {"file": "loulou.webp", "brand": "Loulou", "width": 106, "height": 120}, {"file": "osaka-cocina-nikkei.webp", "brand": "Osaka Cocina Nikkei", "width": 312, "height": 120}, {"file": "wasl.webp", "brand": "wasl", "width": 320, "height": 120}, {"file": "nikki-beach.webp", "brand": "Nikki Beach", "width": 397, "height": 120}, {"file": "marea.webp", "brand": "Marea", "width": 328, "height": 120}, {"file": "jean-georges-restaurants.webp", "brand": "Jean-Georges Restaurants", "width": 388, "height": 120}, {"file": "the-setai-miami-beach.webp", "brand": "The Setai Miami Beach", "width": 123, "height": 120}, {"file": "roka.webp", "brand": "Roka", "width": 420, "height": 115}, {"file": "maybourne.webp", "brand": "Maybourne", "width": 197, "height": 120}, {"file": "sandy-lane.webp", "brand": "Sandy Lane", "width": 211, "height": 120}, {"file": "tashas-group.webp", "brand": "Tashas Group", "width": 119, "height": 120}, {"file": "jetex.webp", "brand": "Jetex", "width": 348, "height": 120}, {"file": "hakkasan-group.webp", "brand": "Hakkasan Group", "width": 420, "height": 111}, {"file": "gleneagles.webp", "brand": "Gleneagles", "width": 117, "height": 120}, {"file": "nammos-hotels-and-resorts.webp", "brand": "Nammos Hotels \u0026 Resorts", "width": 420, "height": 120}, {"file": "50-eggs-hospitality-group.webp", "brand": "50 Eggs Hospitality Group", "width": 296, "height": 120}, {"file": "jose-andres-group.webp", "brand": "José Andrés Group", "width": 144, "height": 120}, {"file": "sushisamba.webp", "brand": "Sushisamba", "width": 420, "height": 114}, {"file": "the-ned.webp", "brand": "The Ned", "width": 308, "height": 120}, {"file": "casa-tua.webp", "brand": "Casa Tua", "width": 420, "height": 81}, {"file": "the-wolseley.webp", "brand": "The Wolseley", "width": 420, "height": 54}, {"file": "tom-kerridge.webp", "brand": "Tom Kerridge", "width": 99, "height": 120}, {"file": "unknown-71.webp", "brand": "unknown", "width": 116, "height": 120}, {"file": "per-se.webp", "brand": "Per Se", "width": 420, "height": 98}, {"file": "gordon-ramsay.webp", "brand": "Gordon Ramsay", "width": 351, "height": 120}, {"file": "scotts-mayfair.webp", "brand": "Scott's Mayfair", "width": 281, "height": 120}, {"file": "hotel-cafe-royal.webp", "brand": "Hotel Café Royal", "width": 329, "height": 120}, {"file": "sexy-fish.webp", "brand": "Sexy Fish", "width": 420, "height": 105}, {"file": "mina.webp", "brand": "Mina", "width": 298, "height": 120}, {"file": "shanghai-me.webp", "brand": "Shanghai Me", "width": 272, "height": 120}, {"file": "pendry-hotels.webp", "brand": "Pendry Hotels", "width": 420, "height": 107}, {"file": "ldv-hospitality.webp", "brand": "LDV Hospitality", "width": 155, "height": 120}, {"file": "scarpetta.webp", "brand": "Scarpetta", "width": 389, "height": 120}, {"file": "twiggy.webp", "brand": "Twiggy", "width": 420, "height": 80}, {"file": "hard-rock.webp", "brand": "Hard Rock", "width": 200, "height": 120}];
+window.JC_VOICES=[{"name": "Sally Lloyd", "title": "Chief People Officer, Maybourne", "company": "Maybourne", "photo": "sally-lloyd.webp", "logo": "maybourne.webp", "quote": "James \u0026 Cranwell possesses an understanding of the distinctive talent needs across our growing portfolio. They present candidates who embody the qualities we seek and integrate seamlessly into our teams."}, {"name": "Eugenio Pirri", "title": "Former Chief Executive Officer, Dorchester Collection", "company": "Dorchester Collection", "photo": "eugenio-pirri.webp", "logo": "dorchester-collection.webp", "quote": "They are true game-changers in identifying top talent whilst at the same time providing a genuine, friendly service, and that is why they have my endorsement."}, {"name": "Nicolas Budzynski", "title": "Chief Executive Officer, LPM", "company": "LPM", "photo": "nicolas-budzynski.webp", "logo": "lpm.webp", "quote": "Warren and his team communicate clearly, understand our culture, move fast, and guide the process with confidence. Their candidates integrate seamlessly, and I highly recommend them without hesitation."}, {"name": "Trevor Horwell", "title": "Chief Executive Officer, Nobu Hospitality Group", "company": "Nobu Hospitality", "photo": "trevor.webp", "logo": "nobu.webp", "quote": "Our most recent search was for our General Manager to open our highly anticipated Toronto project, which was delivered perfectly."}, {"name": "Sam Bakhshandehpour", "title": "Chief Executive Officer, José Andrés Group", "company": "José Andrés Group", "photo": "sam-bakhshandehpour.webp", "logo": "jose-andres-group.webp", "quote": "Providing us with powerhouse off-market talent and A-level site opportunities, along with the personalised service and trust that we value."}, {"name": "Simon Casson", "title": "Chief Executive Officer, Corinthia Hotels", "company": "Corinthia Hotels", "photo": "simon-casson.webp", "logo": "corinthia.webp", "quote": "James \u0026 Cranwell provide us with some of the finest talent in the world in an instant, perfectly understanding what it takes to be a part of our globally revered team."}];</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+<script>
+(() => {
+  /* ---------- Content ---------- */
+  const CLIENTS = window.JC_CLIENTS || [];
+  const VOICES = window.JC_VOICES || [];
+
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const fine = matchMedia('(pointer: fine)').matches;
+  const hasGsap = typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined';
+
+  /* Client wall: two rows, each duplicated for a seamless loop */
+  const list = document.getElementById('client-list');
+  const half = Math.ceil(CLIENTS.length / 2);
+  [['trackA', CLIENTS.slice(0, half)], ['trackB', CLIENTS.slice(half)]].forEach(([id, items]) => {
+    const t = document.getElementById(id);
+    const html = items.map(c => `<img src="assets/img/clients/${c.file}" alt="" width="${c.width}" height="${c.height}" style="height:min(var(--lh),${(230 * c.height / c.width).toFixed(1)}px,${c.height}px)" loading="lazy" decoding="async">`).join('');
+    t.innerHTML = html + html;
+  });
+  list.innerHTML = CLIENTS.filter(c => c.brand && c.brand !== 'unknown').map(c => `<li>${c.brand}</li>`).join('');
+
+  /* Testimonials */
+  document.getElementById('voice-list').innerHTML = VOICES.map(v => `
+    <figure class="voice">
+      <div class="portrait"><img src="assets/img/headshots/${v.photo}" alt="${v.name}" width="800" height="1000" loading="lazy"></div>
+      <div>
+        <blockquote><p class="ink-words">${v.quote}</p></blockquote>
+        <footer>
+          <cite><b>${v.name}</b><span>${v.title}</span></cite>
+          ${v.logo ? `<img class="co" src="assets/img/testimonial-logos/${v.logo}" alt="${v.company}" height="34" loading="lazy">` : ''}
+        </footer>
+      </div>
+    </figure>`).join('');
+
+  /* Split paragraphs into words for the ink reveal */
+  document.querySelectorAll('.ink-words').forEach(el => {
+    const text = el.textContent.trim();
+    el.innerHTML = `<span class="sr-only">${text}</span>` + text.split(/\s+/).map(w => `<span class="w" aria-hidden="true">${w}</span>`).join(' ');
+  });
+
+  /* Clocks */
+  const clocks = [...document.querySelectorAll('.clock')];
+  const tick = () => clocks.forEach(c => { c.textContent = new Intl.DateTimeFormat('en-GB', {hour: '2-digit', minute: '2-digit', timeZone: c.dataset.tz}).format(new Date()) + ' local'; });
+  tick(); setInterval(tick, 15000);
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  /* Menu */
+  const btn = document.querySelector('.menu-btn'), drawer = document.getElementById('drawer');
+  const setMenu = open => {
+    btn.setAttribute('aria-expanded', open); btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    drawer.classList.toggle('is-open', open); drawer.inert = !open;
+    lenis && (open ? lenis.stop() : lenis.start());
+  };
+  btn.addEventListener('click', () => setMenu(btn.getAttribute('aria-expanded') !== 'true'));
+  drawer.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
+  addEventListener('keydown', e => { if (e.key === 'Escape' && drawer.classList.contains('is-open')) { setMenu(false); btn.focus(); } });
+
+  /* Forms (prototype: no network submission) */
+  const form = document.getElementById('enq-form'), err = document.getElementById('f-err');
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    const name = form.elements.name.value.trim(), email = form.elements.email.value.trim();
+    if (!name) { err.textContent = 'Please add your name.'; form.elements.name.focus(); return; }
+    if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) { err.textContent = 'Please add an email address we can reply to, like name@company.com.'; form.elements.email.focus(); return; }
+    err.textContent = ''; form.classList.add('is-sent');
+  });
+  document.getElementById('news-form').addEventListener('submit', e => { e.preventDefault(); const i = document.getElementById('n-email'); i.value = ''; i.placeholder = 'Thank you, you are on the list.'; });
+
+  /* Film: load after the page is interactive, choose size by screen, skip on data saver */
+  const film = document.getElementById('film');
+  const saveData = navigator.connection && (navigator.connection.saveData || /2g/.test(navigator.connection.effectiveType || ''));
+  const startFilm = () => {
+    if (reduce || saveData) return;
+    const small = innerWidth < 900;
+    film.innerHTML = `<source src="assets/video/${small ? 'hero-720-v4' : 'hero-1080-v4'}.mp4" type="video/mp4">`;
+    film.load();
+    /* hand over only once a real frame is on screen, so the poster never cuts to an empty or different frame */
+    const reveal = () => { document.getElementById('poster').style.opacity = 0; };
+    if ('requestVideoFrameCallback' in film) film.requestVideoFrameCallback(() => requestAnimationFrame(reveal));
+    else film.addEventListener('playing', () => setTimeout(reveal, 120), {once: true});
+    film.play().catch(() => {});
+  };
+  document.getElementById('poster').style.transition = 'opacity 1.2s var(--ease)';
+  addEventListener('load', () => (window.requestIdleCallback || (f => setTimeout(f, 600)))(startFilm, {timeout: 2500}), {once: true});
+
+  let lenis = null;
+  if (!hasGsap || reduce) { document.documentElement.classList.remove('motion'); return; }
+
+  gsap.registerPlugin(ScrollTrigger);
+  const E = 'expo.out';
+
+  /* Smooth scroll */
+  if (typeof Lenis !== 'undefined') {
+    lenis = new Lenis({lerp: 0.085, wheelMultiplier: 0.9});
+    lenis.on('scroll', ScrollTrigger.update);
+    gsap.ticker.add(t => lenis.raf(t * 1000));
+    gsap.ticker.lagSmoothing(0);
+    document.querySelectorAll('a[href^="#"]').forEach(a => a.addEventListener('click', e => {
+      const id = a.getAttribute('href'); if (id.length < 2) return;
+      const el = document.querySelector(id); if (!el) return;
+      e.preventDefault(); lenis.scrollTo(el, {offset: id === '#top' ? 0 : -60, duration: 1.6});
+    }));
+  }
+
+  /* Arrival runs in CSS (jc-rise, jc-fade, jc-settle) */
+
+  /* The aperture: arch opens to full screen as you scroll */
+  const mm = gsap.matchMedia();
+  mm.add({wide: '(min-width: 641px)', narrow: '(max-width: 640px)'}, ctx => {
+    /* Clip-path is driven from plain numbers: browsers simplify computed inset() strings, which breaks string tweening */
+    const ap = document.getElementById('aperture');
+    const c = ctx.conditions.wide ? {t: 13, rt: 6, b: 9, lf: 56, r: 2000} : {t: 12, rt: 16, b: 57, lf: 16, r: 2000};
+    const draw = () => { ap.style.clipPath = `inset(${c.t}% ${c.rt}% ${c.b}% ${c.lf}% round ${c.r}px ${c.r}px 0px 0px)`; };
+    draw();
+    const tl = gsap.timeline({scrollTrigger: {trigger: '.hero-stage', start: 'top top', end: '+=170%', scrub: 1, pin: true, anticipatePin: 1}});
+    tl.to(c, {t: 0, rt: 0, b: 0, lf: 0, r: 0, ease: 'power1.in', duration: 1, onUpdate: draw}, 0)
+      .to('.aperture .film', {scale: 1.08, ease: 'none', duration: 1.7}, 0)
+      .to('.hero-copy', {yPercent: -18, opacity: 0, ease: 'power1.in', duration: .45}, .25)
+      .to('.hero-side', {opacity: 0, ease: 'none', duration: .5}, 0)
+      /* then the name arrives in the open frame: words rise out of their masks, the ampersand settles a beat later */
+      .set('.hero-wm', {visibility: 'visible'}, .55)
+      .to('.wm-scrim', {opacity: 1, ease: 'none', duration: .45}, .5)
+      .fromTo('.hero-wm .wm-w > span', {yPercent: 110, filter: 'blur(14px)'}, {yPercent: 0, filter: 'blur(0px)', ease: 'power3.out', duration: .45, stagger: .14}, .6)
+      .fromTo('.hero-wm .wm-amp', {opacity: 0, scale: .7, rotate: -14, filter: 'blur(10px)'}, {opacity: 1, scale: 1, rotate: 0, filter: 'blur(0px)', ease: 'back.out(1.6)', duration: .4}, .88)
+      .to({}, {duration: .4});
+  });
+
+  /* Header: solid after hero, hides on scroll down */
+  const hdr = document.getElementById('hdr');
+  ScrollTrigger.create({start: 'top -80', end: 'max', onUpdate: s => {
+    hdr.classList.toggle('is-solid', s.scroll() > innerHeight * 1.1);
+    hdr.classList.toggle('is-hidden', s.direction === 1 && s.scroll() > innerHeight * 1.4 && !drawer.classList.contains('is-open'));
+  }});
+
+  /* Ink reveal: words go from faint to full as they pass the reading line */
+  document.querySelectorAll('.ink-words').forEach(el => {
+    const words = el.querySelectorAll('.w');
+    /* words only dim once the paragraph is about to scroll into view */
+    ScrollTrigger.create({trigger: el, start: 'top 250%', once: true, onEnter: () => {
+      el.classList.add('ink-dim');
+      gsap.to(words, {opacity: 1, stagger: .08, ease: 'none', scrollTrigger: {trigger: el, start: 'top 82%', end: 'bottom 52%', scrub: .6}});
+    }});
+  });
+
+  /* Numbers */
+  document.querySelectorAll('[data-count]').forEach(el => {
+    const n = +el.dataset.count, o = {v: 0};
+    el.textContent = '0';
+    gsap.to(o, {v: n, duration: 2.2, ease: 'expo.out', scrollTrigger: {trigger: el, start: 'top 88%', once: true}, onUpdate: () => { el.textContent = Math.round(o.v); }, onComplete: () => { el.textContent = n; }});
+  });
+  gsap.from('.fig', {y: 40, opacity: 0, duration: 1.2, ease: E, stagger: .12, scrollTrigger: {trigger: '.figures', start: 'top 85%', once: true}});
+
+  /* Section headings rise */
+  gsap.utils.toArray('.sec-head, .enq .intro').forEach(h => gsap.from(h.children, {y: 50, opacity: 0, duration: 1.3, ease: E, stagger: .1, scrollTrigger: {trigger: h, start: 'top 85%', once: true}}));
+
+  /* Service chapters: arch-masked images wipe up as each chapter arrives */
+  mm.add('(min-width: 981px)', () => {
+    const figs = gsap.utils.toArray('.ch-media figure');
+    const chs = gsap.utils.toArray('.chapter');
+    chs.forEach((ch, i) => {
+      if (i > 0) gsap.fromTo(figs[i], {clipPath: 'inset(100% 0% 0% 0% round 999px 999px 0px 0px)'}, {clipPath: 'inset(0% 0% 0% 0% round 999px 999px 0px 0px)', ease: 'none', scrollTrigger: {trigger: ch, start: 'top 95%', end: 'top 35%', scrub: .8}});
+      gsap.from(ch.querySelectorAll('h3, p, li'), {y: 30, opacity: 0, duration: 1.1, ease: E, stagger: .06, scrollTrigger: {trigger: ch, start: 'top 70%', once: true}});
+    });
+    figs.forEach(f => gsap.fromTo(f.querySelector('img'), {yPercent: -8}, {yPercent: 0, ease: 'none', scrollTrigger: {trigger: '.chapters', start: 'top bottom', end: 'bottom top', scrub: true}}));
+  });
+
+  /* Client marquee: steady drift, nudged by scroll velocity, eases to a stop on hover */
+  document.querySelectorAll('.marquee').forEach(m => {
+    const track = m.querySelector('.track'), dir = +m.dataset.dir;
+    let x = 0, boost = 0, speed = 1, target = 1, w = 0;
+    const measure = () => { w = track.scrollWidth / 2; };
+    measure(); addEventListener('resize', measure);
+    track.querySelectorAll('img').forEach(i => i.addEventListener('load', measure, {once: true}));
+    m.addEventListener('mouseenter', () => target = 0);
+    m.addEventListener('mouseleave', () => target = 1);
+    ScrollTrigger.create({trigger: m, start: 'top bottom', end: 'bottom top', onUpdate: s => { boost = Math.min(Math.abs(s.getVelocity()) / 220, 6); }});
+    gsap.ticker.add((t, dt) => {
+      speed += (target - speed) * 0.06; boost *= 0.93;
+      x += dir * (0.045 + boost * 0.05) * speed * dt;
+      if (w) { if (x <= -w) x += w; if (x > 0) x -= w; }
+      track.style.transform = `translate3d(${x}px,0,0)`;
+    });
+  });
+
+  /* Testimonial portraits open from a slit */
+  gsap.utils.toArray('.portrait').forEach(p => gsap.from(p, {clipPath: 'inset(50% 0% 50% 0% round 50%)', duration: 1.6, ease: E, scrollTrigger: {trigger: p, start: 'top 85%', once: true}}));
+
+  /* Insight cards */
+  gsap.from('.card', {y: 60, opacity: 0, duration: 1.3, ease: E, stagger: .14, scrollTrigger: {trigger: '.cards', start: 'top 85%', once: true}});
+
+  /* Footer wordmark slides in */
+  gsap.from('.ftr-big', {xPercent: -6, opacity: 0, duration: 1.8, ease: E, scrollTrigger: {trigger: '.ftr-big', start: 'top 95%', once: true}});
+
+  /* Cursor and magnetic buttons (desktop pointers only) */
+  if (fine) {
+    const cur = document.getElementById('cursor');
+    const xTo = gsap.quickTo(cur, 'x', {duration: .5, ease: 'power3'}), yTo = gsap.quickTo(cur, 'y', {duration: .5, ease: 'power3'});
+    addEventListener('pointermove', e => { xTo(e.clientX); yTo(e.clientY); });
+    /* Only on things that go somewhere when clicked */
+    document.querySelectorAll('a.card[data-cursor]').forEach(el => {
+      el.addEventListener('pointerenter', () => { cur.textContent = el.dataset.cursor || 'View'; gsap.to(cur, {scale: 1, opacity: 1, duration: .5, ease: E}); });
+      el.addEventListener('pointerleave', () => gsap.to(cur, {scale: 0, opacity: 0, duration: .4, ease: E}));
+    });
+    document.querySelectorAll('[data-magnetic]').forEach(b => {
+      b.addEventListener('pointermove', e => { const r = b.getBoundingClientRect(); gsap.to(b, {x: (e.clientX - r.left - r.width / 2) * .28, y: (e.clientY - r.top - r.height / 2) * .38, duration: .6, ease: 'power3'}); });
+      b.addEventListener('pointerleave', () => gsap.to(b, {x: 0, y: 0, duration: 1, ease: 'elastic.out(1,.45)'}));
+    });
+  }
+
+  addEventListener('load', () => ScrollTrigger.refresh());
+})();
+</script>
+
+</body>
+</html>

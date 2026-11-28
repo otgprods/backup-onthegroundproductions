@@ -1,0 +1,436 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<title>Cardle Concept C · Portrait</title>
+<link rel="preload" as="image" href="img/hero.jpg" media="(orientation:landscape), (min-width:901px)">
+<link rel="preload" as="image" href="img/hero-portrait.jpg" media="(orientation:portrait) and (max-width:900px)">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Work+Sans:wght@300;400;500&display=swap">
+<style>
+/* Layout: a fashion-house monograph. Photography carries the colour; type is small, quiet and exact. Framed image opens to full bleed on scroll, then calm two-column chapters. Deliberately single light theme (bone + graphite). */
+:root{
+  --bone:#efece6;       /* page ground */
+  --bone-2:#e5e1d9;     /* panels */
+  --graphite:#1d1c1a;   /* type */
+  --stone:#77736b;      /* secondary */
+  --line:#cfc9bf;       /* hairlines */
+  --serif:"Cormorant","Cormorant Garamond",Garamond,"Times New Roman",serif;
+  --sans:"Work Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+  --gut:max(20px,env(safe-area-inset-left,0px));
+  --gutr:max(20px,env(safe-area-inset-right,0px));
+  --ease:cubic-bezier(.22,.61,.12,1);
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html.lenis,html.lenis body{height:auto}
+.lenis.lenis-smooth{scroll-behavior:auto!important}
+body{background:var(--bone);color:var(--graphite);font-family:var(--sans);font-weight:300;font-size:15px;line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--bone)}
+a{color:inherit;text-decoration:none}
+a:focus-visible,button:focus-visible,input:focus-visible{outline:1px solid var(--graphite);outline-offset:4px}
+img{display:block;width:100%;height:100%;object-fit:cover}
+.wrap{padding-left:var(--gut);padding-right:var(--gutr);max-width:1440px;margin-inline:auto}
+.cap{font-family:var(--sans);font-size:11px;font-weight:400;letter-spacing:.22em;text-transform:uppercase}
+.muted{color:var(--stone)}
+.u{background:linear-gradient(currentColor,currentColor) 0 100%/0 1px no-repeat;transition:background-size .6s var(--ease);padding-bottom:2px}
+.u:hover{background-size:100% 1px}
+
+/* frame for photography with graceful fallback */
+.ph{position:relative;overflow:hidden;background:#2a2826}
+.ph img{transform:scale(1.08);will-change:transform}
+.ph picture{display:block;width:100%;height:100%}
+.ph.missing::after{content:attr(data-label);position:absolute;inset:0;display:grid;place-items:center;color:#a39d93;font-family:var(--sans);font-size:11px;letter-spacing:.22em;text-transform:uppercase}
+
+/* header */
+header.top{position:fixed;top:env(safe-area-inset-top,0px);left:0;right:0;z-index:40;color:var(--graphite);transition:color .35s var(--ease)}
+header.top.light{color:var(--bone);text-shadow:0 0 12px rgba(0,0,0,.35)}
+header.top{transition:color .35s var(--ease),background-color .35s var(--ease)}
+header.top:not(.light){background:rgba(239,236,230,.94);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+.menu-btn{display:none;background:none;border:0;padding:0 0 0 16px;min-height:44px;font:inherit;letter-spacing:inherit;text-transform:inherit;color:inherit;cursor:pointer}
+/* full-screen menu for phones */
+.menu{position:fixed;inset:0;z-index:39;background:var(--bone);display:flex;flex-direction:column;justify-content:center;padding:96px var(--gutr) 48px var(--gut);opacity:0;visibility:hidden;transition:opacity .5s var(--ease),visibility 0s .5s}
+.menu a{font-family:var(--serif);font-weight:300;font-size:clamp(40px,12vw,64px);line-height:1.15;color:var(--graphite);display:block;padding:4px 0}
+.menu a em{font-style:italic}
+.menu .cap{margin-top:40px;display:flex;gap:24px}
+.menu .cap a{font-family:var(--sans);font-size:12px;font-weight:400;letter-spacing:.22em;padding:12px 0;display:inline-block}
+html.menu-open .menu{opacity:1;visibility:visible;transition:opacity .5s var(--ease)}
+html.menu-open header.top{background:transparent!important;color:var(--graphite)!important;text-shadow:none!important}
+header.top .wrap{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;padding-block:22px}
+header.top nav{display:flex;gap:28px}
+header.top .r{display:flex;justify-content:flex-end;gap:28px}
+.wordmark{font-family:var(--serif);font-weight:400;font-size:24px;letter-spacing:.32em;text-transform:uppercase;padding-left:.32em}
+@media (max-width:820px){header.top nav,.hide-s{display:none}header.top .wrap{grid-template-columns:auto 1fr;padding-block:14px}.menu-btn{display:inline-block}header.top .r>a{display:none}.wordmark{font-size:20px;min-height:44px;display:inline-flex;align-items:center}}
+
+/* hero: framed portrait that opens to full bleed */
+.hero{height:200vh;height:200svh;position:relative}
+.hero .pin{position:sticky;top:0;height:100vh;height:100svh;min-height:560px;display:grid;place-items:center;overflow:hidden}
+.hero .frame{position:absolute;inset:0;display:grid;place-items:center;clip-path:inset(0% 0% 0% 0%);will-change:clip-path;pointer-events:none;z-index:2}
+.hero .frame .ph{position:absolute;inset:0}
+.hero .frame .ph img{object-position:36% 18%}
+/* portrait phones and tablets: a taller version of the same photo (wall above his head, jacket fading to dark below) so nothing is cut */
+@media (orientation:portrait) and (max-width:900px){.hero .frame .ph img{object-position:50% 22%}}
+.hero .frame .ph::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.12),rgba(0,0,0,0) 35%,rgba(0,0,0,0) 55%,rgba(0,0,0,.45))}
+/* Title sits in the empty wall to the right of his face on landscape screens; bottom-left over the jacket on portrait ones.
+   Both copies (dark on the page, light inside the frame) share these rules so the colour split lines up. */
+.hero .title{position:absolute;z-index:2;left:max(var(--gut),calc((100% - 1440px)/2 + 20px));right:max(var(--gutr),calc((100% - 1440px)/2 + 20px));top:53%;text-align:right;color:var(--graphite);pointer-events:none}
+.hero h1,.hero .h1{font-family:var(--serif);font-weight:300;font-size:clamp(56px,8.4vw,176px);line-height:.92;letter-spacing:-.01em;margin:0}
+.hero h1 .l,.hero .h1 .l{display:table;margin-left:auto}
+.hero .title{transform-origin:50% 50%}
+/* closing lockup under the centred title; only on the dark copy, absolutely placed so both copies keep identical layout */
+.hero .lock{position:absolute;top:100%;left:0;right:0;margin-top:48px;display:flex;flex-direction:column;align-items:center;gap:14px;font-size:13px;color:var(--graphite);opacity:0;visibility:hidden}
+.hero .lock i{display:block;width:44px;height:1px;background:var(--line)}
+.hero .lock a{pointer-events:auto}
+.hero h1 em,.hero .h1 em{font-style:italic}
+@media (max-width:900px),(orientation:portrait){.hero .title{top:auto;bottom:132px;text-align:left}.hero h1 .l,.hero .h1 .l{margin-left:0}.hero h1,.hero .h1{font-size:clamp(56px,16vw,120px)}}
+.hero .meta{position:absolute;left:0;right:0;bottom:32px;z-index:3}
+/* phones held sideways: short screen, so a smaller title in the wall to the right, clear of the bottom row */
+@media (orientation:landscape) and (max-height:520px){.hero .pin{min-height:0}.hero .title{top:auto;bottom:64px;text-align:right}.hero h1 .l,.hero .h1 .l{margin-left:auto}.hero h1,.hero .h1{font-size:clamp(40px,17vh,96px)}.hero .meta{bottom:18px}}
+.hero .meta .wrap{display:flex;justify-content:space-between;gap:16px;align-items:end;flex-wrap:wrap}
+.hero .meta,.hero .meta a{color:var(--bone)}
+.hero .light,.hero .light a{color:var(--bone)}
+/* small caps in the hero: a touch heavier and larger on both copies (so the split stays aligned); a soft shadow only on the light one so it holds on the photo */
+.hero .meta .cap{font-size:12px;font-weight:500;letter-spacing:.22em;text-shadow:0 0 12px rgba(0,0,0,.45),0 1px 2px rgba(0,0,0,.3)}
+
+/* album */
+section{padding-block:clamp(96px,14vw,200px)}
+#music{padding-top:clamp(56px,6vw,96px)}
+.album{display:grid;grid-template-columns:5fr 1fr 6fr;align-items:start}
+.album>*{min-width:0}
+.album .cover{grid-column:1;aspect-ratio:1;max-width:100%}
+.album .txt{grid-column:3}
+h2{font-family:var(--serif);font-weight:300;font-size:clamp(40px,5.2vw,80px);line-height:1;letter-spacing:-.01em;margin:22px 0 28px;text-wrap:balance}
+h2 em{font-style:italic}
+.lede{font-family:var(--serif);font-size:clamp(20px,1.9vw,26px);line-height:1.45;font-weight:400;max-width:34ch}
+.tl{list-style:none;margin:48px 0;padding:0;columns:2;column-gap:40px;counter-reset:t}
+.tl li{break-inside:avoid;display:flex;gap:16px;padding:10px 0;border-top:1px solid var(--line);counter-increment:t}
+.tl li::before{content:counter(t,decimal-leading-zero);font-size:11px;letter-spacing:.12em;color:var(--stone);padding-top:3px;font-variant-numeric:tabular-nums}
+.actions{display:flex;gap:32px;flex-wrap:wrap;align-items:center}
+.btn{display:inline-flex;align-items:center;gap:14px;padding:16px 26px;background:var(--graphite);color:var(--bone);font-size:11px;font-weight:400;letter-spacing:.22em;text-transform:uppercase;transition:background .5s var(--ease)}
+.btn{position:relative;overflow:hidden;isolation:isolate}
+.btn::before{content:"";position:absolute;inset:0;background:#000;transform:scaleX(0);transform-origin:right;transition:transform .7s var(--ease);z-index:-1}
+.btn:hover::before{transform:scaleX(1);transform-origin:left}
+
+/* Copy motion. Start states only exist once JS adds .m to <html> (after GSAP loads, never with reduced motion) */
+.ln{display:block;overflow:hidden;padding-bottom:.1em;margin-bottom:-.1em}
+.lni{display:block;will-change:transform}
+.ln em{display:inline-block;padding-right:.06em}
+html.m .rule{position:relative;border-top-color:transparent!important}
+html.m .rule::after{content:"";position:absolute;left:0;right:0;top:-1px;height:1px;background:var(--line);transform:scaleX(var(--rx,0));transform-origin:left}
+.qw{display:inline-block;will-change:opacity,filter}
+@media (max-width:900px){.album{grid-template-columns:1fr;gap:48px}.album .cover,.album .txt{grid-column:1}.tl{columns:1}}
+
+/* full-bleed interlude */
+.interlude{padding:0}
+.interlude .ph{height:clamp(420px,90vh,1000px);height:clamp(420px,90svh,1000px)}
+.interlude .q{position:absolute;inset:auto 0 0 0;padding-block:clamp(32px,6vw,80px);color:#f4f1ea;z-index:2}
+.interlude .q .wrap{max-width:none}
+.interlude .q p{font-family:var(--serif);font-style:italic;font-weight:300;font-size:clamp(30px,4.4vw,68px);line-height:1.05;max-width:20ch;margin:0 0 18px}
+.interlude .ph::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(0,0,0,.55));z-index:1}
+
+/* stage */
+.stage-grid{display:grid;grid-template-columns:4fr 1fr 7fr}
+.stage-grid>*{min-width:0}
+.stage-grid .roles{grid-column:3}
+.role{display:grid;grid-template-columns:80px 1fr auto;gap:24px;align-items:baseline;padding:26px 0;border-top:1px solid var(--line);transition:padding .6s var(--ease)}
+.role:last-child{border-bottom:1px solid var(--line)}
+.role:hover{padding-left:12px}
+.role h3{font-family:var(--serif);font-weight:400;font-size:clamp(26px,2.6vw,38px);line-height:1;margin:0}
+.role .y{font-size:12px;letter-spacing:.12em;color:var(--stone);font-variant-numeric:tabular-nums}
+@media (max-width:900px){.stage-grid{grid-template-columns:1fr}.stage-grid .roles{grid-column:1}.role{grid-template-columns:56px 1fr}.role .cap{grid-column:2}}
+
+/* diptych */
+.diptych{display:grid;grid-template-columns:7fr 5fr;gap:clamp(16px,2vw,28px);align-items:end}
+.diptych>*{min-width:0}
+.diptych .a{aspect-ratio:4/5;max-width:100%}
+.diptych .b{aspect-ratio:3/4;max-width:100%}
+.diptych figcaption{margin-top:14px}
+@media (max-width:700px){.diptych{grid-template-columns:1fr}}
+
+/* live */
+.live{background:var(--bone-2)}
+.live .head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap}
+.date{display:grid;grid-template-columns:160px 1fr 1fr auto;gap:24px;align-items:baseline;padding:24px 0;border-top:1px solid var(--line)}
+.date:last-of-type{border-bottom:1px solid var(--line)}
+.date>*{min-width:0}
+.date .c{font-family:var(--serif);font-size:30px;line-height:1}
+.date.tbc{color:var(--stone)}
+@media (max-width:760px){.date{grid-template-columns:1fr auto}.date .v,.date .d{grid-column:1/-1}}
+form.list{display:flex;gap:0;margin-top:48px;max-width:560px;border-bottom:1px solid var(--graphite)}
+form.list input{flex:1;min-width:0;border:0;background:transparent;padding:14px 0;font:inherit;font-size:16px;color:var(--graphite)}
+form.list button{min-height:44px;padding-left:16px}
+form.list button{border:0;background:none;font:inherit;font-size:11px;letter-spacing:.22em;text-transform:uppercase;cursor:pointer;color:var(--graphite)}
+
+/* store */
+.store .head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:56px}
+.objects{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(16px,2vw,28px);max-width:1040px}
+.objects a{display:flex;flex-direction:column;gap:16px}
+.objects .ph{aspect-ratio:1;max-width:100%;background:var(--bone-2)}
+.objects .ph.missing::after{color:var(--stone)}
+/* album artwork is never cropped or zoomed: the cover type runs close to its edges */
+.ph.art img{transform:none;object-fit:contain}
+.objects .row{display:flex;justify-content:space-between;gap:12px}
+.objects .row span:first-child{font-family:var(--serif);font-size:22px;line-height:1.1}
+.objects .row .cap{white-space:nowrap;padding-top:6px}
+@media (max-width:760px){.objects{grid-template-columns:1fr 1fr}.objects .row{flex-direction:column;gap:2px}.objects .row .cap{padding-top:0}}
+
+footer{padding-block:80px 40px;border-top:1px solid var(--line)}
+footer .big{font-family:var(--serif);font-weight:300;font-size:clamp(40px,9vw,170px);white-space:nowrap;line-height:.85;letter-spacing:.08em;text-transform:uppercase;margin:0 0 64px;text-align:center}
+footer .row{display:flex;justify-content:space-between;flex-wrap:wrap;gap:20px}
+footer ul{list-style:none;margin:0;padding:0;display:flex;gap:28px;flex-wrap:wrap}
+/* larger invisible hit area for the small inline links, without moving anything */
+.hero a.u,footer ul a{position:relative}
+.hero a.u::after,footer ul a::after{content:"";position:absolute;inset:-12px -10px}
+@media (max-width:600px){footer .big{font-size:16vw;line-height:.95}footer .big span{display:block}}
+/* phones: comfortable tap targets for the small-caps links */
+@media (max-width:820px){a.cap.u,.actions .cap.u,.date a.cap,footer ul a{display:inline-block;padding-block:13px}footer ul{gap:4px 24px}}
+
+@media (prefers-reduced-motion:reduce){.hero{height:auto}.hero .pin{position:relative}.hero .frame{clip-path:none}.ph img{transform:none}*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<header class="top light" id="hdr">
+  <div class="wrap cap">
+    <nav aria-label="Main"><a class="u" href="#music">Music</a><a class="u" href="#stage">Stage</a><a class="u" href="#live">Live</a></nav>
+    <a class="wordmark" href="#top">Matt Cardle</a>
+    <div class="r"><a class="u hide-s" href="https://open.spotify.com/artist/3906URNmNa1VCXEeiJ3DSH" target="_blank" rel="noopener">Listen</a><a class="u" href="https://mattcardle.tmstor.es/" target="_blank" rel="noopener">Store</a><button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="menu">Menu</button></div>
+  </div>
+</header>
+<nav class="menu" id="menu" aria-label="Menu">
+  <a href="#music">Music</a><a href="#stage">Stage</a><a href="#live">Live</a>
+  <a href="https://open.spotify.com/artist/3906URNmNa1VCXEeiJ3DSH" target="_blank" rel="noopener"><em>Listen</em></a><a href="https://mattcardle.tmstor.es/" target="_blank" rel="noopener"><em>Store</em></a>
+  <div class="cap"><a href="https://www.facebook.com/mattcardlemusic" target="_blank" rel="noopener">Facebook</a><a href="https://x.com/MattCardle" target="_blank" rel="noopener">X</a><a href="https://music.youtube.com/channel/UC_E3RAdnYALj7m1DAUFOwXA" target="_blank" rel="noopener">YouTube</a></div>
+</nav>
+
+<div class="hero" id="top">
+  <div class="pin">
+    <div class="title"><h1><span class="l">The Great</span> <em class="l">Escape</em></h1><div class="lock cap"><span>The fifth studio album</span><i></i><a class="u" href="https://mattcardle.tmstor.es/" target="_blank" rel="noopener">Available now</a></div></div>
+    <div class="meta"><div class="wrap cap"><span>The fifth studio album</span><a class="u" href="https://mattcardle.tmstor.es/" target="_blank" rel="noopener">Available now</a></div></div>
+    <!-- Light copy of the type lives inside the clipped frame, so letters flip from dark to light exactly where the photograph meets the page -->
+    <div class="frame" id="frame">
+      <div class="ph" data-label="Album portrait"><picture><source media="(orientation:portrait) and (max-width:900px)" srcset="img/hero-portrait.jpg"><img src="img/hero.jpg" alt="Matt Cardle, The Great Escape portrait" data-zoom fetchpriority="high"></picture></div>
+      <div class="title light" aria-hidden="true"><div class="h1"><span class="l">The Great</span> <em class="l">Escape</em></div></div>
+    </div>
+  </div>
+</div>
+
+<section id="music">
+  <div class="wrap album">
+    <div class="cover ph art" data-label="Album cover"><img src="img/cover.jpg?v=3" srcset="img/cover-1000.jpg 1000w, img/cover.jpg?v=3 2000w" sizes="(max-width:900px) 92vw, 42vw" alt="The Great Escape album cover" loading="lazy" decoding="async"></div>
+    <div class="txt">
+      <span class="cap muted">Album · 3 July 2026 · 15 songs</span>
+      <h2>Seven years in the making, <em>unhurried</em> by design.</h2>
+      <p class="lede">Made with producer and close friend Dan McDougall, The Great Escape sets classic songwriting against strings, alt-pop texture and that falsetto.</p>
+      <ol class="tl">
+        <li>Drinking Dreams</li><li>Fading Lights</li><li>Mirrorball</li><li>You Take The Sun</li>
+        <li>Painkiller</li><li>Stilettos</li><li>Broken</li><li>Strong Enough</li>
+        <li>Blunt Steel</li><li>With You</li><li>Raining Diana</li>
+      </ol>
+      <div class="actions"><a class="btn" href="https://mattcardle.tmstor.es/" target="_blank" rel="noopener">Order signed edition</a><a class="cap u" href="https://music.apple.com/gb/album/the-great-escape/1849017885" target="_blank" rel="noopener">Stream the album</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="interlude">
+  <div class="ph" data-label="Full-bleed press shot"><picture><source media="(max-aspect-ratio: 4/5)" srcset="img/wide-portrait.jpg"><img src="img/wide-2400.jpg" alt="" data-par loading="lazy" decoding="async"></picture>
+    <div class="q"><div class="wrap"><p>"It's not about me at this point. It's now about them."</p><span class="cap">Matt Cardle on The Great Escape</span></div></div>
+  </div>
+</section>
+
+<section id="stage">
+  <div class="wrap stage-grid">
+    <div><span class="cap muted">On stage</span><h2>A decade of <em>leading roles.</em></h2><p class="muted" style="max-width:34ch">"Cardle's vocals are sensational throughout." Theatre Weekly, Kinky Boots at the London Coliseum.</p></div>
+    <div class="roles">
+      <div class="role"><span class="y">2026</span><h3>Kinky Boots</h3><span class="cap muted">Charlie Price · London Coliseum</span></div>
+      <div class="role"><span class="y">2024</span><h3>&amp; Juliet</h3><span class="cap muted">William Shakespeare · UK tour</span></div>
+      <div class="role"><span class="y">2019</span><h3>Jesus Christ Superstar</h3><span class="cap muted">Pilate · Barbican</span></div>
+      <div class="role"><span class="y">2018</span><h3>Strictly Ballroom</h3><span class="cap muted">Wally Strand · Piccadilly</span></div>
+      <div class="role"><span class="y">2015</span><h3>Memphis</h3><span class="cap muted">Huey Calhoun · Shaftesbury</span></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap diptych">
+    <figure style="margin:0"><div class="a ph" data-label="Portrait"><img src="img/p1.jpg" alt="Matt Cardle portrait" data-par loading="lazy" decoding="async"></div><figcaption class="cap muted">The Great Escape, 2026</figcaption></figure>
+    <figure style="margin:0"><div class="b ph" data-label="Detail"><img src="img/p2.jpg" alt="Matt Cardle detail" data-par loading="lazy" decoding="async"></div><figcaption class="cap muted">From X Factor winner, 2010, to five studio albums</figcaption></figure>
+  </div>
+</section>
+
+<section class="live" id="live">
+  <div class="wrap">
+    <div class="head"><div><span class="cap muted">Live</span><h2>In concert</h2></div><span class="cap muted">Dates to be announced</span></div>
+    <div class="date tbc"><span class="cap d">To be announced</span><span class="c">London</span><span class="v muted">Venue to be confirmed</span><a class="cap u" href="#live">Notify me</a></div>
+    <div class="date tbc"><span class="cap d">To be announced</span><span class="c">Manchester</span><span class="v muted">Venue to be confirmed</span><a class="cap u" href="#live">Notify me</a></div>
+    <form class="list" onsubmit="event.preventDefault();this.querySelector('button').textContent='Thank you'">
+      <input id="emailC" type="email" placeholder="Your email, for first access to tickets" aria-label="Email" required>
+      <button type="submit">Join</button>
+    </form>
+  </div>
+</section>
+
+<section class="store">
+  <div class="wrap">
+    <div class="head"><div><span class="cap muted">The store</span><h2>Signed and <em>handwritten.</em></h2></div><a class="cap u" href="https://mattcardle.tmstor.es/" target="_blank" rel="noopener">View the store</a></div>
+    <div class="objects">
+      <a href="https://slinky.to/TheGreatEscape" target="_blank" rel="noopener"><div class="ph art" data-label="Album cover"><img src="img/cover-1000.jpg" alt="The Great Escape" loading="lazy" decoding="async"></div><div class="row"><span>The Great Escape</span><span class="cap muted">Out now</span></div></a>
+      <a href="https://mattcardle.tmstor.es/product/letters-further-listening-deluxe" target="_blank" rel="noopener"><div class="ph art" data-label="Product photograph"><img src="img/store/letters-deluxe-cd.jpg" loading="lazy" decoding="async" alt="Letters: 'Further Listening' Deluxe CD"></div><div class="row"><span>Letters: &lsquo;Further Listening&rsquo; Deluxe CD</span><span class="cap muted">&pound;10</span></div></a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p class="big"><span>Matt</span> <span>Cardle</span></p>
+    <div class="row cap">
+      <ul>
+        <li><a class="u" href="https://www.facebook.com/mattcardlemusic" target="_blank" rel="noopener">Facebook</a></li>
+        <li><a class="u" href="https://x.com/MattCardle" target="_blank" rel="noopener">X</a></li>
+        <li><a class="u" href="https://open.spotify.com/artist/3906URNmNa1VCXEeiJ3DSH" target="_blank" rel="noopener">Spotify</a></li>
+        <li><a class="u" href="https://music.youtube.com/channel/UC_E3RAdnYALj7m1DAUFOwXA" target="_blank" rel="noopener">YouTube</a></li>
+      </ul>
+      <span class="muted">© 2026 Matt Cardle</span>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/v2/js/lenis.min.js?v=20261025a"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script>
+(function(){
+  document.querySelectorAll('.ph img').forEach(img=>{
+    const miss=()=>{img.remove();img.parentElement&&img.parentElement.classList.add('missing')};
+    if(img.complete&&!img.naturalWidth)miss();else img.addEventListener('error',miss);
+  });
+  // Header is light while it sits over a photograph (the open hero frame, the interlude) and dark on bone
+  const hdr=document.getElementById('hdr'),frameEl=document.getElementById('frame'),inter=document.querySelector('.interlude');
+  function tone(){
+    const hh=hdr.offsetHeight,vh=innerHeight,m=/inset\(([\d.]+)%/.exec(frameEl.style.clipPath||'');
+    const clipTop=m?parseFloat(m[1])/100*vh:0,hb=document.querySelector('.hero').getBoundingClientRect().bottom;
+    const ir=inter.getBoundingClientRect();
+    // Each bottom label is fully faded before the closing frame edge (left, right or bottom) reaches it, at any screen size
+    const pct=m?parseFloat(m[1])/100:0;
+    document.querySelectorAll('.hero .meta .wrap > *').forEach(el=>{
+      const r=el.getBoundingClientRect(),W=innerWidth;
+      const touch=Math.min(r.left/W,(W-r.right)/W,(vh-r.bottom)/vh);
+      const o=Math.max(0,1-pct/Math.max(touch*.85,.001));
+      el.style.opacity=o;el.style.visibility=o?'':'hidden';
+    });
+    hdr.classList.toggle('light',(clipTop<hh*.5&&hb>hh*.5)||(ir.top<hh*.5&&ir.bottom>hh*.5));
+  }
+  addEventListener('scroll',tone,{passive:true});addEventListener('resize',tone);tone();
+  // Phone menu
+  const mb=document.getElementById('menuBtn'),menu=document.getElementById('menu');
+  function setMenu(open){document.documentElement.classList.toggle('menu-open',open);mb.setAttribute('aria-expanded',open);mb.textContent=open?'Close':'Menu';if(window.__lenis)open?window.__lenis.stop():window.__lenis.start();if(!open)tone()}
+  mb.addEventListener('click',()=>setMenu(!document.documentElement.classList.contains('menu-open')));
+  menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>setMenu(false)));
+  addEventListener('keydown',e=>{if(e.key==='Escape')setMenu(false)});
+  const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(reduce||!window.gsap||!window.Lenis)return;
+  gsap.registerPlugin(ScrollTrigger);
+  const lenis=new Lenis({lerp:.075,wheelMultiplier:.85});
+  window.__lenis=lenis;
+  lenis.on('scroll',ScrollTrigger.update);
+  gsap.ticker.add(t=>lenis.raf(t*1000));gsap.ticker.lagSmoothing(0);
+  document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{const t=document.querySelector(a.getAttribute('href'));if(t){e.preventDefault();lenis.scrollTo(t,{duration:1.8})}}));
+
+  // Opens full bleed, then the frame closes to nothing on scroll; the light type inside it goes with it,
+  // leaving the dark title on bone, which holds until the pin releases
+  // While it closes, the title glides (both copies identically, transforms only) from the wall to a centred title card,
+  // each line centring itself; the bottom row hands over to a small lockup under the title.
+  const pin=document.querySelector('.hero .pin');
+  const lineX=(i,el)=>{const t=el.closest('.title');return t.offsetWidth/2-(el.offsetLeft+el.offsetWidth/2)};
+  const titleY=(i,el)=>pin.clientHeight*.44-(el.offsetTop+el.offsetHeight/2);
+  const tl=gsap.timeline({defaults:{ease:'power1.inOut'},scrollTrigger:{trigger:'.hero',start:'top top',end:'45% top',scrub:.6,invalidateOnRefresh:true}});
+  tl.fromTo('#frame',{clipPath:'inset(0% 0% 0% 0%)'},{clipPath:'inset(50% 50% 50% 50%)',duration:1,onUpdate:tone},0)
+    .fromTo('[data-zoom]',{scale:1},{scale:matchMedia('(orientation:portrait) and (max-width:900px)').matches?1.04:1.12,duration:1,ease:'none'},0)
+    .to('.hero .title',{y:titleY,scale:.8,duration:1},0)
+    .to('.hero .title .l',{x:lineX,duration:1},0)
+    .to('.hero .lock',{autoAlpha:1,duration:.25},.8);
+  // As the album section arrives, the lockup fades before it reaches the header
+  gsap.to('.hero .pin > .title',{opacity:0,ease:'none',scrollTrigger:{trigger:'.hero',start:'bottom 95%',end:'bottom 50%',scrub:true}});
+
+  // ---- Copy motion: one idea throughout. Lines rise out of a mask, labels settle, rules draw, then text follows. Each plays once.
+  document.documentElement.classList.add('m');
+  const once={toggleActions:'play none none none'};
+  const E='expo.out';
+
+  // Split a heading into its rendered lines (measured), each in an overflow mask; re-split on resize until it has played
+  function splitLines(h){
+    if(!h.dataset.src)h.dataset.src=h.innerHTML;
+    h.innerHTML=h.dataset.src;
+    const toks=[];
+    (function walk(node,it){[...node.childNodes].forEach(n=>{
+      if(n.nodeType===3){n.textContent.split(/(\s+)/).forEach(w=>{if(w.trim())toks.push({w,it})})}
+      else if(n.nodeName==='BR'){toks.push({br:1})}
+      else walk(n,it||n.nodeName==='EM')})})(h,false);
+    h.innerHTML=toks.map(t=>t.br?'<br>':t.it?'<em class="wd">'+t.w+'</em>':'<span class="wd">'+t.w+'</span>').join(' ');
+    const lines=[];let top=null;
+    h.querySelectorAll('.wd').forEach(w=>{const y=w.offsetTop;if(top===null||Math.abs(y-top)>4){lines.push([]);top=y}lines[lines.length-1].push(w.outerHTML)});
+    h.innerHTML=lines.map(l=>'<span class="ln"><span class="lni">'+l.join(' ')+'</span></span>').join('');
+  }
+  function play(h,delay){
+    h.dataset.played=1;
+    const tl=gsap.timeline({delay,onComplete:()=>{h.dataset.done=1}});
+    h.querySelectorAll('.lni').forEach((ln,i)=>{
+      tl.fromTo(ln,{yPercent:105},{yPercent:0,duration:1.3,ease:E},i*.08);
+      ln.querySelectorAll('em').forEach(em=>tl.fromTo(em,{yPercent:30,opacity:0},{yPercent:0,opacity:1,duration:1.2,ease:E},i*.08+.1));
+    });
+  }
+  const heads=[...document.querySelectorAll('main h2, section h2')];
+  heads.forEach(h=>{
+    splitLines(h);
+    gsap.set(h.querySelectorAll('.lni'),{yPercent:105});
+    ScrollTrigger.create({trigger:h,start:'top 85%',once:true,onEnter:()=>{
+      const eyebrow=h.previousElementSibling&&h.previousElementSibling.matches('.cap')?h.previousElementSibling:null;
+      if(eyebrow)gsap.fromTo(eyebrow,{opacity:0,letterSpacing:'.4em'},{opacity:1,letterSpacing:'.22em',duration:1,ease:E});
+      play(h,eyebrow?.15:0);
+      const body=h.parentElement.querySelectorAll(':scope > p.lede, :scope > p.muted');
+      if(body.length)gsap.fromTo(body,{opacity:0,y:18,filter:'blur(4px)'},{opacity:1,y:0,filter:'blur(0px)',duration:1.1,ease:'power3.out',delay:.45,stagger:.1,clearProps:'filter'});
+    }});
+  });
+  // hide eyebrows and body before they play (JS-only)
+  heads.forEach(h=>{const e=h.previousElementSibling;if(e&&e.matches('.cap'))gsap.set(e,{opacity:0});gsap.set(h.parentElement.querySelectorAll(':scope > p.lede, :scope > p.muted'),{opacity:0})});
+  let rt;addEventListener('resize',()=>{clearTimeout(rt);rt=setTimeout(()=>heads.forEach(h=>{splitLines(h);if(!h.dataset.played)gsap.set(h.querySelectorAll('.lni'),{yPercent:105})}),200)});
+
+  // Lists: each hairline draws left to right, then its row's text follows
+  [['.tl','li'],['.roles','.role'],['.live .wrap','.date'],['.objects','a']].forEach(([wrapSel,rowSel])=>{
+    const wrap=document.querySelector(wrapSel);if(!wrap)return;
+    const rows=[...wrap.querySelectorAll(':scope > '+rowSel)];
+    rows.forEach(r=>{if(rowSel==='li')r.innerHTML='<span>'+r.innerHTML+'</span>';if(rowSel!=='a')r.classList.add('rule')});
+    const kids=rows.map(r=>r.children.length?[...r.children]:[r]).flat();
+    gsap.set(kids,{opacity:0,y:10});
+    if(rowSel!=='a')gsap.set(rows,{'--rx':0});
+    ScrollTrigger.create({trigger:wrap,start:'top 85%',once:true,onEnter:()=>{
+      const tl=gsap.timeline();
+      rows.forEach((r,i)=>{
+        if(rowSel!=='a')tl.to(r,{'--rx':1,duration:1.1,ease:'power3.inOut'},i*.07);
+        tl.to(r.children.length?[...r.children]:[r],{opacity:1,y:0,duration:.9,ease:E,stagger:.04},i*.07+.35);
+      });
+    }});
+  });
+
+  // Pull quote: read aloud, word by word, scrubbed to scroll; attribution follows
+  const qp=document.querySelector('.interlude .q p'),qa=document.querySelector('.interlude .q .cap');
+  if(qp){
+    qp.innerHTML=qp.textContent.split(/(\s+)/).map(w=>w.trim()?'<span class="qw">'+w+'</span>':w).join('');
+    const qtl=gsap.timeline({scrollTrigger:{trigger:'.interlude',start:'top 70%',end:'top 15%',scrub:.8}});
+    qtl.fromTo(qp.querySelectorAll('.qw'),{opacity:.08,filter:'blur(4px)'},{opacity:1,filter:'blur(0px)',stagger:.12,duration:.6,ease:'none'})
+       .fromTo(qa,{opacity:0,y:8},{opacity:1,y:0,duration:.6},'>-.2');
+  }
+
+  // Footer wordmark tightens as it arrives
+  gsap.fromTo('footer .big',{letterSpacing:'.18em',opacity:.4},{letterSpacing:'.08em',opacity:1,ease:'none',scrollTrigger:{trigger:'footer',start:'top bottom',end:'top 45%',scrub:.8}});
+
+  // Slow parallax inside every frame
+  gsap.utils.toArray('[data-par]').forEach(img=>gsap.fromTo(img,{yPercent:-6},{yPercent:6,ease:'none',scrollTrigger:{trigger:img.parentElement,start:'top bottom',end:'bottom top',scrub:true}}));
+})();
+</script>
+
+</body>
+</html>

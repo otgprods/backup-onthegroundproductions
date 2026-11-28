@@ -1,0 +1,11 @@
+{
+  "name": "On The Ground Productions",
+  "short_name": "OTG",
+  "icons": [
+    { "src": "/assets/img/favicon-32.png", "sizes": "32x32", "type": "image/png" },
+    { "src": "/assets/img/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" }
+  ],
+  "theme_color": "#14130f",
+  "background_color": "#fbfaf8",
+  "display": "standalone"
+}

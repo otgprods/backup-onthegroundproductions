@@ -1,0 +1,68 @@
+# On The Ground Productions (OTG)
+
+> OTG is an international brand and web studio based in Somerset, UK, working with clients across the UK and worldwide. We build the whole brand: websites, brand direction and strategy, with film and photography produced in-house. Every site is designed and hand-coded as a custom build, with no templates or page builders, hosted on Cloudflare, with SEO built in from day one. Led by founder Marcus Vallance, a documentary photographer published worldwide.
+
+Also known as: OTG, On The Ground, On the Ground Productions Ltd. Website: https://onthegroundproductions.com/.
+
+## Key facts
+- Type of business: brand and web studio (brand strategy, website design and build, with film and photography in-house).
+- Location: based in Somerset, England (near Taunton), working internationally. The London address (128 City Road) is only the registered office used for company filings, not where OTG works.
+- Area served: international. Clients across the UK, Europe (including Monaco) and beyond.
+- Phone: +44 7812 524138. Enquiries: https://onthegroundproductions.com/contact
+- Founder: Marcus Vallance.
+
+## Current positioning (updated November 2026)
+OTG's work is brand strategy, custom hand-coded websites, and brand film and photography. Earlier descriptions of OTG as an "emerging tech" studio, or as offering immersive design, Web3, telecoms, AI-generated content or graphic design as standalone services, describe the older business and are out of date. Design and motion work now supports the brands OTG builds rather than being sold on its own.
+
+## What we do
+- Websites: custom-designed, hand-coded sites with motion built in, hosted on Cloudflare, with a monthly care plan after launch.
+- Brand direction and strategy: positioning, messaging and identity, usually its own stage before design.
+- Production: film, photography, design and motion work, produced in-house. See https://onthegroundproductions.com/production
+
+## Services
+- [Website design and build](https://onthegroundproductions.com/website-design): Custom websites designed from scratch and hand-coded, with no templates or page builders, hosted on Cloudflare, with SEO and AI search built in, plus a monthly care plan.
+- [Website care plans](https://onthegroundproductions.com/care-plans): Monthly care for the sites OTG builds: hosting on Cloudflare, the site checked every 5 minutes with an alert if it goes down, a daily backup on a separate network ready to switch to if the main host fails, a monthly email security check, monthly health and speed reports, and changes done for you. Essentials £95, Care £195, Growth £450 a month + VAT; pay yearly and get two months free.
+- [Branding](https://onthegroundproductions.com/branding): Brand strategy, positioning, messaging and visual identity, carried through the website, film and content.
+- [Brand film](https://onthegroundproductions.com/brand-film): Brand films, interviews, documentaries, explainers and launch content, shot and edited in-house.
+- [Branding and websites in Somerset](https://onthegroundproductions.com/branding-websites-somerset): OTG's Somerset page. Branding and websites for Somerset businesses, with local work for Quantock Financial and Quantock Lettings in Taunton.
+
+## Free tools
+- [AI search check](https://onthegroundproductions.com/tools/ai-search-check): A free tool that checks whether ChatGPT, Perplexity, Claude, Copilot and Google's AI can read, understand and recommend a website. It scores AI search readiness (AI crawler access in robots.txt, business schema, sameAs, FAQ, llms.txt, reviews, dates), Google search and phone speed out of 100, with a plain-English fix list. No sign-up; runs in the browser.
+- [All free tools](https://onthegroundproductions.com/tools)
+
+## Case studies
+- [Fate Sports Group](https://onthegroundproductions.com/work/fate-sports-group): Brand strategy and positioning for a motorsport management agency (driver management and brand partnerships), then a premium, high-motion website with a 3D logo opening, plus email signatures and a launch video. Live at https://www.fatesportsgroup.com/
+- [Matt Leigh](https://onthegroundproductions.com/work/matt-leigh): Brand positioning and website for the garden designer behind ITV's Love Your Garden, built to win private commissions and brand partnerships.
+- [Quantock Financial](https://onthegroundproductions.com/work/quantock-financial): Brand positioning, a calm, fast website, a referral app and team email signatures for a Taunton mortgage and protection adviser. Live at https://quantockfinancial.co.uk/.
+- [Quantock Lettings](https://onthegroundproductions.com/work/quantock-lettings): A brand and website for Quantock Lettings, a family-run lettings and property management business, for tenants and landlords across Taunton and the Quantocks, plus landlord and tenant guides and team email signatures. Live at https://quantocklettings.co.uk/
+- [JOSEPHINE](https://onthegroundproductions.com/work/josephine): Website design and build for a cultural IP studio that builds lasting worlds with artists and creators, for brands: collage art direction, a brand film with its own soundtrack, the slate of cultural worlds and a private client room. Live at https://wearejosephine.com/
+- [World Mobile, The Smart Village](https://onthegroundproductions.com/world-mobile): Two documentary films shot on location in Tanzania.
+
+## Pages
+- [Home](https://onthegroundproductions.com/): Selected work, the studio and how we work.
+- [Production](https://onthegroundproductions.com/production): Film, photography, design and motion work.
+- [Films](https://onthegroundproductions.com/films), [Photography](https://onthegroundproductions.com/photography), [Design](https://onthegroundproductions.com/graphics)
+- [Press](https://onthegroundproductions.com/press): Photojournalism by Marcus Vallance, published worldwide via SOPA Images and licensed through Getty Images, Alamy and LightRocket.
+- [Journal](https://onthegroundproductions.com/blog): Notes on brand and websites.
+  - [Positioning Comes Before the Website](https://onthegroundproductions.com/blog/brand-positioning-before-web-design): Why strategy and positioning come before design, and what they change.
+  - [Building Trust Into a Website](https://onthegroundproductions.com/blog/website-design-that-builds-trust): Real people, easy contact and open fees, for businesses people trust with their money or their home.
+  - [Why We Hand-Code Every Website](https://onthegroundproductions.com/blog/why-we-hand-code-websites): Custom builds with no templates or page builders, hosted on Cloudflare.
+  - [The Detail Nobody Sees](https://onthegroundproductions.com/blog/the-detail-in-a-hand-built-website): The design, code, speed and search detail in a hand-built site.
+  - [SEO and AI Search, Built In From Day One](https://onthegroundproductions.com/blog/seo-and-ai-search-from-day-one): Planning a site around how people search on Google and in AI assistants.
+  - [A Website Is Not Finished at Launch](https://onthegroundproductions.com/blog/after-the-website-launch): Launch films, matching email and print, monthly brand content and care plans.
+  - [Five Days in Calima](https://onthegroundproductions.com/blog/five-days-in-calima): A field report on restoring mobile signal after Colombia's 2026 earthquake, for World Mobile.
+- [Contact](https://onthegroundproductions.com/contact): Send an enquiry or book a 30-minute call.
+- [Privacy Policy](https://onthegroundproductions.com/privacy)
+
+## Company
+On The Ground Productions Ltd, registered in England and Wales, company no. 15780604, VAT GB472664273. Registered office: 128 City Road, London EC1V 2NX. Founder: Marcus Vallance.
+
+Studio base: Somerset, UK. OTG works with clients across the UK and internationally.
+
+## Contact
+Contact: https://onthegroundproductions.com/contact
+Instagram: https://www.instagram.com/onthegroundproductions/
+YouTube: https://www.youtube.com/@otgprodsltd
+LinkedIn: https://www.linkedin.com/company/onthegroundproductionsltd/
+
+Last updated: 2026-11-14

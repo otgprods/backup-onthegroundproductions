@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>OTG email signature</title>
+<link rel="icon" href="/favicon.ico">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono&display=swap">
+<style>
+  /* private tool page, styled to match the v2 site (square corners, Geist, bone ground) */
+  :root{--bg:#F2F0EB;--fg:#111111;--muted:rgba(17,17,17,.68);--line:rgba(17,17,17,.16)}
+  *,*::before,*::after{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--fg);font-family:'Geist',system-ui,-apple-system,'Segoe UI',sans-serif;font-size:17px;line-height:1.55}
+  .strip{display:flex;gap:3px;height:6px}.strip span{flex:1}
+  .wrap{max-width:820px;margin:0 auto;padding:56px 16px 72px}
+  .eyebrow,.label{font-family:'Geist Mono',ui-monospace,Menlo,monospace;font-size:13px;text-transform:uppercase;letter-spacing:.06em}
+  .eyebrow{color:var(--muted)}
+  h1{font-size:clamp(40px,7vw,72px);font-weight:600;letter-spacing:-.045em;line-height:.95;margin:16px 0 20px}
+  p.sub{margin:0 0 40px;color:var(--muted);max-width:56ch}
+  .card{background:#fff;border:1px solid var(--line);padding:28px 26px;margin-bottom:20px;overflow-x:auto}
+  .label{margin:0 0 18px;color:var(--muted)}
+  .mock{font-size:14px;color:#444;margin-bottom:18px;font-family:Helvetica,Arial,sans-serif}
+  .btn{min-height:52px;padding:0 24px;display:inline-flex;align-items:center;border:1px solid var(--fg);background:var(--fg);color:var(--bg);font:500 16px 'Geist',system-ui,sans-serif;cursor:pointer;transition:opacity .3s}
+  .btn:hover{opacity:.85}
+  .ok{display:inline-block;margin-left:14px;font-size:15px;opacity:0;transition:opacity .3s}
+  .ok.show{opacity:1}
+  ol{padding-left:20px;margin:0}
+  ol li{margin-bottom:6px}
+  .note{font-size:14px;color:var(--muted);margin:14px 0 0}
+  .warn{display:none;background:#fff4ec;border:1px solid #f0c9b3;color:#7a3416;padding:12px 14px;font-size:14px;margin-bottom:18px}
+  .dark{background:#1f1f1f;border-color:#333}
+  .dark .label{color:rgba(255,255,255,.6)}
+  .dark .mock{color:#d8d4cc}
+  /* roughly what Gmail and Apple Mail do to the text in dark mode; the images stay as they are */
+  .dark #sig2 td,.dark #sig2 div,.dark #sig2 a,.dark #sig2 span{color:#ECE9E3 !important}
+  .dark #sig2 .s-muted{color:#A7A29A !important}
+  .grid{display:grid;gap:20px}
+  @media (min-width:760px){.grid{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+<div class="strip" aria-hidden="true"><span style="background:#14100E"></span><span style="background:#2F4A3C"></span><span style="background:#0F3440"></span><span style="background:#1B1C4B"></span></div>
+<div class="wrap">
+  <span class="eyebrow">On the Ground, private tool</span>
+  <h1>Email signature</h1>
+  <p class="sub">The new signature, in the site's design. The O logo sits on its own bone tile and the strip of client colours is an image, so neither is recoloured in dark mode. The text uses plain colours that mail apps switch for you.</p>
+
+  <div class="card">
+    <p class="label">Light mode</p>
+    <div class="warn" id="warn">The signature images aren't live yet. Deploy the site first (they live at onthegroundproductions.com/assets/email/), then reload this page before copying.</div>
+    <div class="mock">Best,</div>
+
+    <!-- ============ SIGNATURE (everything inside #sig is what gets copied) ============ -->
+    <div id="sig">
+<table cellpadding="0" cellspacing="0" border="0" role="presentation" style="border-collapse:collapse;font-family:Helvetica,Arial,sans-serif;">
+  <tr>
+    <td valign="top" style="padding:2px 16px 0 0;">
+      <a href="https://onthegroundproductions.com" target="_blank" style="text-decoration:none;"><img src="https://onthegroundproductions.com/assets/email/otg-sig-v2-mark.png" width="56" height="56" alt="OTG" style="display:block;width:56px;height:56px;border:0;"></a>
+    </td>
+    <td valign="top" style="padding:0;">
+      <div style="font-family:Helvetica,Arial,sans-serif;font-size:17px;line-height:22px;font-weight:bold;letter-spacing:-0.2px;color:#111111;margin:0;">Marcus Vallance</div>
+      <div class="s-muted" style="font-family:Menlo,Consolas,'Courier New',monospace;font-size:11px;line-height:16px;letter-spacing:0.8px;text-transform:uppercase;color:#6B6B6B;margin:3px 0 9px;">Founder&nbsp;·&nbsp;On the Ground</div>
+      <div style="font-family:Helvetica,Arial,sans-serif;font-size:13px;line-height:20px;color:#111111;">
+        <a href="mailto:marcus@onthegroundproductions.com" style="color:#111111;text-decoration:none;">marcus@onthegroundproductions.com</a><br>
+        <a href="https://onthegroundproductions.com" target="_blank" style="color:#111111;text-decoration:none;">onthegroundproductions.com</a>
+      </div>
+      <div style="font-family:Helvetica,Arial,sans-serif;font-size:12px;line-height:18px;margin-top:6px;">
+        <a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ1wsjRj1qhmjwHgqLBt9IwcmJsexKkUIQpf1GtDj5OUyO6FDhUYUJvcAz66QCq6FDHuIi8N1L1O" target="_blank" style="color:#111111;text-decoration:underline;">Book an intro call</a><span class="s-muted" style="color:#9A9A9A;">&nbsp;&nbsp;/&nbsp;&nbsp;</span><a href="https://www.instagram.com/onthegroundproductions/" target="_blank" style="color:#111111;text-decoration:underline;">Instagram</a><span class="s-muted" style="color:#9A9A9A;">&nbsp;&nbsp;/&nbsp;&nbsp;</span><a href="https://www.youtube.com/@otgprodsltd" target="_blank" style="color:#111111;text-decoration:underline;">YouTube</a>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" style="padding:14px 0 0;"><img src="https://onthegroundproductions.com/assets/email/otg-sig-v2-strip.png" width="280" height="4" alt="" style="display:block;width:280px;height:4px;border:0;"></td>
+  </tr>
+  <tr>
+    <td colspan="2" class="s-muted" style="padding:8px 0 0;font-family:Helvetica,Arial,sans-serif;font-size:12px;line-height:18px;color:#6B6B6B;">We build the whole brand.</td>
+  </tr>
+</table>
+    </div>
+    <!-- ============ /SIGNATURE ============ -->
+
+    <div style="margin-top:26px">
+      <button class="btn" id="copy" type="button">Copy signature</button><span class="ok" id="ok">Copied. Now paste it into Gmail.</span>
+    </div>
+  </div>
+
+  <div class="card dark">
+    <p class="label">How it looks in dark mode</p>
+    <div class="mock">Best,</div>
+    <div id="sig2"></div>
+    <p class="note" style="color:#A7A29A">Dark-mode mail apps lighten the text automatically, as shown here. The logo tile and the strip stay exactly the same.</p>
+  </div>
+
+  <div class="grid">
+    <div class="card">
+      <p class="label">Gmail (Google Workspace)</p>
+      <ol>
+        <li>Click <strong>Copy signature</strong> above.</li>
+        <li>In Gmail, click the <strong>cog</strong> (top right), then <strong>See all settings</strong>.</li>
+        <li>On the <strong>General</strong> tab, scroll to <strong>Signature</strong>. Select the old "OTG" signature and delete it, or click <strong>Create new</strong>.</li>
+        <li>Click into the signature box and paste (<strong>Cmd + V</strong>).</li>
+        <li>Under <strong>Signature defaults</strong>, choose it for new emails and replies, then <strong>Save Changes</strong> at the bottom.</li>
+      </ol>
+    </div>
+    <div class="card">
+      <p class="label">Apple Mail (Mac)</p>
+      <ol>
+        <li>Open this page in <strong>Safari</strong> and click <strong>Copy signature</strong>.</li>
+        <li>In Mail, go to <strong>Mail → Settings → Signatures</strong>.</li>
+        <li>Pick your account, click <strong>+</strong> and name it "OTG".</li>
+        <li>Untick <strong>Always match my default message font</strong>.</li>
+        <li>Delete the placeholder text in the right-hand box and paste (<strong>Cmd + V</strong>).</li>
+        <li>Choose it under <strong>Choose Signature</strong> for that account.</li>
+      </ol>
+    </div>
+  </div>
+  <p class="note">Gmail strips custom fonts from signatures, so the text uses Helvetica and Arial, with a monospace role line to echo the site. On iPhone, set the signature once in Gmail; the Gmail app uses the same one.</p>
+</div>
+<script>
+  // mirror the signature into the dark-mode preview
+  document.getElementById('sig2').innerHTML = document.getElementById('sig').innerHTML;
+  // show a warning if the hosted images aren't live yet
+  var img = document.querySelector('#sig img');
+  function check(){ if (img.complete && img.naturalWidth === 0) document.getElementById('warn').style.display = 'block'; }
+  img.addEventListener('error', check); setTimeout(check, 2500);
+  // copy the rendered signature (keeps formatting, links and the image link)
+  document.getElementById('copy').addEventListener('click', function () {
+    var el = document.getElementById('sig'), r = document.createRange(), s = window.getSelection();
+    s.removeAllRanges(); r.selectNodeContents(el); s.addRange(r);
+    var ok = false; try { ok = document.execCommand('copy'); } catch (e) {}
+    s.removeAllRanges();
+    var m = document.getElementById('ok'); m.textContent = ok ? 'Copied. Now paste it into your mail app.' : 'Select the signature and press Cmd + C.';
+    m.classList.add('show'); setTimeout(function(){ m.classList.remove('show'); }, 4000);
+  });
+</script>
+</body>
+</html>

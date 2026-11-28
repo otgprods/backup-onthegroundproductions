@@ -1,0 +1,86 @@
+/* Free tools (/tools, /tools/ai-search-check). Loaded after site.css on those pages only. */
+.ck-hero .crumb{margin-bottom:4px}
+.ck-hero h1{max-width:13ch}
+.ck-form{margin-top:clamp(28px,4vw,48px);max-width:760px}
+.ck-label{display:block;margin-bottom:10px;font-size:12px;letter-spacing:.08em}
+.ck-row{display:flex;gap:0;border:1px solid var(--fg)}
+.ck-row input{flex:1;min-width:0;font:inherit;font-size:clamp(18px,1.6vw,22px);color:inherit;background:transparent;border:0;border-radius:0;padding:0 18px;min-height:64px;-webkit-appearance:none;appearance:none}
+.ck-row input:focus{outline:none}
+.ck-row:focus-within{box-shadow:0 0 0 3px color-mix(in srgb,var(--fg) 18%,transparent)}
+.ck-row .btn{min-height:64px;border:0;border-left:1px solid var(--fg);white-space:nowrap}
+.ck-row .btn[disabled]{opacity:.6;cursor:progress}
+.ck-small{margin-top:12px;font-size:15px}
+@media (max-width:560px){.ck-row{flex-direction:column}.ck-row .btn{border-left:0;border-top:1px solid var(--fg);justify-content:center}}
+
+.ck-progress[hidden]{display:none}
+.ck-progress{list-style:none;margin:28px 0 0;padding:0;display:flex;flex-direction:column;gap:8px;font-size:13px}
+.ck-progress li{display:flex;align-items:center;gap:10px;opacity:.85}
+.ck-progress li::before{content:"";width:10px;height:10px;border:1px solid currentColor;border-radius:50%;border-top-color:transparent;animation:ck-spin .8s linear infinite;flex-shrink:0}
+.ck-progress li.done::before{content:"✓";border:0;animation:none;width:auto;height:auto;line-height:1}
+@keyframes ck-spin{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion:reduce){.ck-progress li::before{animation:none}}
+
+.ck-res{padding:clamp(24px,4vw,56px) 0 clamp(56px,7vw,96px);border-top:1px solid var(--line)}
+.ck-head h2{font-size:clamp(40px,6vw,88px);letter-spacing:-.045em;margin:10px 0 10px;overflow-wrap:anywhere}
+.ck-dials{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(16px,3vw,40px);margin:clamp(32px,4vw,56px) 0}
+.ck-dial{position:relative;display:flex;flex-direction:column;align-items:center;text-align:center;gap:8px;padding:clamp(20px,3vw,36px) 12px;border:1px solid var(--line)}
+.ck-ring{position:relative;width:150px;aspect-ratio:1}
+.ck-ring svg{width:100%;height:100%;transform:rotate(-90deg);display:block}
+.ck-dial circle{fill:none;stroke-width:7}
+.ck-dial .tr{stroke:var(--line)}
+.ck-dial .fg{stroke:var(--fg);transition:stroke-dashoffset 1.2s var(--ease)}
+.ck-dial.is-ok .fg{stroke:#9a6a00}
+.ck-dial.is-bad .fg{stroke:#b3261e}
+.ck-dial-n{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px}
+.ck-dial-n b{font-size:46px;font-weight:600;letter-spacing:-.04em;line-height:1}
+.ck-dial-n span{font-size:10px;opacity:.6}
+.ck-dial h3{font-size:clamp(18px,1.6vw,22px);letter-spacing:-.02em;margin:10px 0 6px}
+.ck-dial p{font-size:12px;opacity:.7}
+@media (max-width:700px){.ck-dials{grid-template-columns:1fr}.ck-dial{flex-direction:row;text-align:left;justify-content:flex-start;gap:18px;padding:16px}.ck-ring{width:84px;flex-shrink:0}.ck-dial-n b{font-size:28px}.ck-dial-n span{display:none}.ck-dial h3{margin:0 0 4px}}
+
+.ck-block{margin-top:clamp(40px,5vw,72px)}
+.ck-h{font-size:clamp(26px,3vw,40px);letter-spacing:-.03em;margin-bottom:24px}
+.ck-fixes{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.ck-fixes li{display:grid;grid-template-columns:160px minmax(0,1fr);gap:20px;padding:22px 0;border-bottom:1px solid var(--line)}
+.ck-fixes h4{font-size:clamp(19px,1.6vw,23px);font-weight:600;letter-spacing:-.02em;margin:0 0 6px}
+.ck-fixes p{color:var(--muted);font-size:17px;line-height:1.5;max-width:70ch;margin:0}
+.ck-fixes .ck-where{margin-top:10px;font-size:12px;text-transform:none;letter-spacing:0;overflow-wrap:anywhere}
+.ck-tier{font-size:12px;padding-top:4px}
+.ck-fixes .t0 .ck-tier{color:#b3261e}
+.ck-fixes .t1 .ck-tier{color:#9a6a00}
+@media (max-width:640px){.ck-fixes li{grid-template-columns:1fr;gap:6px}}
+.ck-good{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:10px}
+.ck-good li{border:1px solid var(--line);padding:10px 14px;font-size:16px}
+.ck-good li::before{content:"✓  "}
+
+.ck-cta{margin-top:clamp(48px,6vw,88px);background:#111;color:#F2F0EB;padding:clamp(32px,5vw,72px);display:flex;flex-direction:column;gap:22px;--fg:#F2F0EB;--bg:#111}
+.ck-cta h2{font-size:clamp(40px,6.4vw,96px);line-height:.92;letter-spacing:-.05em;max-width:13ch}
+.ck-cta p{max-width:58ch;font-size:clamp(18px,1.6vw,22px);opacity:.85}
+.ck-cta .btn--solid::before{background:#fff}
+
+.ck-table{width:100%;border-collapse:collapse;font-size:16px}
+.ck-table th{text-align:left;font-family:var(--mono);font-size:12px;text-transform:uppercase;letter-spacing:.06em;font-weight:400;padding:10px 12px 10px 0;border-bottom:1px solid var(--fg)}
+.ck-table td{padding:12px 12px 12px 0;border-bottom:1px solid var(--line);vertical-align:top}
+.ck-table td.ok{color:#2f6b3a}
+.ck-table td.no{color:#b3261e;font-weight:600}
+.ck-table td:last-child,.ck-table th:last-child{text-align:right;padding-right:0;white-space:nowrap}
+.ck-mark{display:inline-block;width:1.6em}
+.ck-mark.ok{color:#2f6b3a}.ck-mark.part{color:#9a6a00}.ck-mark.no{color:#b3261e}
+.ck-note{font-size:14px;margin-top:12px}
+@media (max-width:560px){.ck-table{font-size:14px}.ck-table td.mono{font-size:12px;overflow-wrap:anywhere}}
+.ck-more p{font-size:16px;color:var(--muted);margin-bottom:10px}
+.ck-more a{text-decoration:underline;text-underline-offset:3px}
+.ck-copy{font:inherit;font-family:var(--mono);font-size:12px;text-transform:uppercase;letter-spacing:.06em;background:none;color:inherit;border:1px solid currentColor;padding:8px 12px;min-height:40px;cursor:pointer}
+.ck-copy:hover{background:var(--fg);color:var(--bg)}
+.ck-err p{font-size:clamp(18px,1.6vw,22px);max-width:60ch;margin-bottom:10px}
+.ck-err a{text-decoration:underline}
+
+.ck-link p{max-width:60ch;font-size:18px;margin-bottom:16px}
+.ck-snippet{display:flex;gap:12px;align-items:center;border:1px solid var(--line);padding:14px 16px;max-width:900px}
+.ck-snippet code{flex:1;min-width:0;font-family:var(--mono);font-size:13px;overflow-wrap:anywhere}
+
+.ck-card{display:flex;flex-direction:column;gap:18px;padding:clamp(28px,4vw,56px);border:1px solid var(--fg);max-width:900px;transition:background-color .35s ease}
+.ck-card h2{font-size:clamp(40px,5.4vw,80px);letter-spacing:-.045em;line-height:.95}
+.ck-card p{color:var(--muted);font-size:clamp(18px,1.5vw,21px);max-width:56ch}
+.ck-card .btn{align-self:flex-start}
+.ck-card:hover .arrow{transform:translateX(6px)}

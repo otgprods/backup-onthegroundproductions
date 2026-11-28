@@ -1,0 +1,73 @@
+# On The Ground Productions — robots.txt
+# Allow all reputable crawlers, including AI search / answer engines.
+
+User-agent: *
+Allow: /
+Disallow: /concepts/
+
+# AI search & answer-engine crawlers (explicitly welcomed)
+User-agent: GPTBot
+Allow: /
+Disallow: /concepts/
+
+User-agent: OAI-SearchBot
+Allow: /
+Disallow: /concepts/
+
+User-agent: ChatGPT-User
+Allow: /
+Disallow: /concepts/
+
+User-agent: PerplexityBot
+Allow: /
+Disallow: /concepts/
+
+User-agent: Perplexity-User
+Allow: /
+Disallow: /concepts/
+
+User-agent: Google-Extended
+Allow: /
+Disallow: /concepts/
+
+User-agent: ClaudeBot
+Allow: /
+Disallow: /concepts/
+
+User-agent: Claude-User
+Allow: /
+Disallow: /concepts/
+
+User-agent: Claude-SearchBot
+Allow: /
+Disallow: /concepts/
+
+User-agent: DuckAssistBot
+Allow: /
+Disallow: /concepts/
+
+User-agent: MistralAI-User
+Allow: /
+Disallow: /concepts/
+
+User-agent: Applebot
+Allow: /
+Disallow: /concepts/
+
+User-agent: Applebot-Extended
+Allow: /
+Disallow: /concepts/
+
+User-agent: Bingbot
+Allow: /
+Disallow: /concepts/
+
+User-agent: Amazonbot
+Allow: /
+Disallow: /concepts/
+
+User-agent: meta-externalagent
+Allow: /
+Disallow: /concepts/
+
+Sitemap: https://onthegroundproductions.com/sitemap.xml

@@ -1,0 +1,33 @@
+/* ============================================================
+   COPY MOTION LAYER
+   Only active when <html class="mo"> (set before first paint when
+   JS is on and the visitor has not asked for reduced motion).
+   Everything is transform / opacity only.
+   ============================================================ */
+:root{--mo-ease:cubic-bezier(.22,.61,.36,1)}
+
+/* --- page headline rises line by line; the copy around it follows --- */
+.mo main h1,.mo main h1.reveal{opacity:1;transform:none;transition:none}
+/* hidden until the lines are wrapped; shows itself after 3s if the script never arrives */
+.mo main h1:not(.mo-ready){visibility:hidden;animation:moShow 0s 3s forwards}
+@keyframes moShow{to{visibility:visible}}
+.mo .mo-ln{display:block;overflow:hidden;padding-bottom:.14em;margin-bottom:-.14em}
+.mo .mo-ln>span{display:block;transform:translateY(112%)}
+.mo .mo-go .mo-ln>span{animation:moRise 1.15s var(--mo-ease) forwards;animation-delay:calc(.25s + var(--i,0)*.13s)}
+@keyframes moRise{to{transform:none}}
+.mo .mo-intro .mo-ik,.mo .mo-intro .mo-ik.reveal{opacity:0;transform:none;transition:none}
+.mo .mo-intro.mo-go .mo-ik{animation:moFadeUp .95s var(--mo-ease) forwards;animation-delay:var(--mo-d,.1s)}
+@keyframes moFadeUp{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+
+/* --- section headings: words rise out of a mask, one after another --- */
+.mo h2.mo-split,.mo h2.mo-split.reveal{opacity:1;transform:none;transition:none}
+.mo .mo-w{display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.16em;margin-bottom:-.16em}
+.mo .mo-w>span{display:inline-block;transform:translateY(108%);transition:transform .95s var(--mo-ease);transition-delay:calc(var(--i,0)*.045s)}
+.mo .mo-split.mo-in .mo-w>span{transform:none}
+
+/* --- quotes: words light up as you read down the page --- */
+.mo .mo-quote .mo-q{opacity:.18;transition:opacity .45s linear}
+.mo .mo-quote .mo-q.on{opacity:1}
+
+/* --- body copy that follows a heading eases up just after it --- */
+.mo main .reveal.mo-txt{transition:opacity .9s var(--mo-ease),transform .9s var(--mo-ease);transition-delay:var(--mo-d,0s)}

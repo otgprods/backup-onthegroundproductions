@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Matt Cardle, Intimate &amp; Live | Live music photo booklet</title>
+<meta name="description" content="Matt Cardle, Intimate &amp; Live: a 28-page photo booklet by On The Ground Productions.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://onthegroundproductions.com/matt-cardle-booklet">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Matt Cardle, Intimate &amp; Live | Photo booklet">
+<meta property="og:description" content="A 28-page photo booklet by On The Ground Productions.">
+<meta property="og:url" content="https://onthegroundproductions.com/matt-cardle-booklet">
+<meta property="og:image" content="https://onthegroundproductions.com/matt-cardle/img/cover-1000.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" as="image" href="/assets/img/matt-cardle-booklet/spread-01.webp">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{
+    height:100%;width:100%;overflow:hidden;background:#000;
+    color:#cfc8ba;
+    font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing:antialiased;
+    overscroll-behavior:none;touch-action:none;
+    cursor:default;
+  }
+  body.hide-ui .chrome{opacity:0}
+  body.hide-ui{cursor:none}
+
+  /* ---------- stage ---------- */
+  #stage{position:fixed;inset:0;background:#000;}
+  .slide{
+    position:absolute;inset:0;
+    display:flex;align-items:center;justify-content:center;
+    opacity:0;visibility:hidden;
+    transition:opacity .85s cubic-bezier(.4,0,.2,1),transform 1.2s cubic-bezier(.2,0,.2,1);
+    transform:scale(1.015);
+    will-change:opacity,transform;
+  }
+  .slide.on{opacity:1;visibility:visible;transform:scale(1);z-index:2}
+  .slide img{
+    max-width:100vw;max-height:100vh;
+    width:auto;height:auto;
+    display:block;
+    user-select:none;-webkit-user-drag:none;pointer-events:none;
+  }
+  /* soft vignette so letterbox edges feel intentional */
+  #vignette{
+    position:fixed;inset:0;pointer-events:none;z-index:3;
+    background:radial-gradient(ellipse at center,rgba(0,0,0,0) 55%,rgba(0,0,0,.45) 100%);
+  }
+
+  /* ---------- click zones ---------- */
+  .zone{position:fixed;top:0;bottom:0;z-index:6;background:transparent}
+  #zprev{left:0;width:28%;cursor:w-resize}
+  #znext{right:0;width:72%;cursor:e-resize}
+
+  /* ---------- chrome ---------- */
+  .chrome{
+    position:fixed;z-index:8;
+    transition:opacity .5s ease;
+    font-size:10px;letter-spacing:.22em;text-transform:uppercase;
+    color:rgba(214,206,192,.62);
+    pointer-events:none;
+  }
+  #title{top:26px;left:30px;font-weight:600}
+  #title b{color:rgba(232,226,214,.92);font-weight:600}
+  #title span{color:rgba(214,206,192,.45);font-weight:400}
+  #credit{bottom:26px;left:30px;color:rgba(214,206,192,.45)}
+  #counter{bottom:24px;right:30px;font-variant-numeric:tabular-nums;font-size:11px}
+  #counter b{color:rgba(232,226,214,.95);font-weight:600}
+  #counter i{font-style:normal;color:rgba(214,206,192,.35)}
+
+  #keys{
+    bottom:26px;left:50%;transform:translateX(-50%);
+    color:rgba(214,206,192,.34);font-size:9px;letter-spacing:.2em;
+    display:flex;gap:20px;align-items:center;
+  }
+  #keys kbd{
+    font:inherit;border:1px solid rgba(214,206,192,.25);
+    border-radius:2px;padding:2px 5px;margin-right:6px;letter-spacing:.1em;
+  }
+
+  /* progress rule */
+  #progress{
+    position:fixed;left:0;bottom:0;height:1px;z-index:9;
+    background:rgba(232,226,214,.55);width:0;
+    transition:width .6s cubic-bezier(.4,0,.2,1);
+  }
+
+  /* ---------- contact sheet ---------- */
+  #sheet{
+    position:fixed;inset:0;z-index:20;background:#000;
+    opacity:0;visibility:hidden;transition:opacity .45s ease;
+    padding:64px 48px 48px;overflow-y:auto;overscroll-behavior:contain;
+  }
+  #sheet.on{opacity:1;visibility:visible}
+  #sheet h2{
+    font-size:10px;letter-spacing:.28em;text-transform:uppercase;font-weight:600;
+    color:rgba(214,206,192,.5);margin-bottom:26px;
+  }
+  #grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px}
+  .thumb{
+    position:relative;cursor:pointer;background:#0a0a0a;
+    outline:1px solid rgba(232,226,214,.08);outline-offset:0;
+    transition:outline-color .25s ease,opacity .25s ease;opacity:.62;
+  }
+  .thumb:hover,.thumb.cur{opacity:1;outline-color:rgba(232,226,214,.55)}
+  .thumb img{width:100%;display:block}
+  .thumb em{
+    position:absolute;left:8px;bottom:6px;font-style:normal;
+    font-size:9px;letter-spacing:.18em;color:#fff;
+    text-shadow:0 1px 6px rgba(0,0,0,.9);
+  }
+
+  @media (max-width:720px){
+    #title{top:16px;left:16px;font-size:9px}
+    #credit{bottom:16px;left:16px;font-size:9px}
+    #counter{bottom:14px;right:16px;font-size:10px}
+    #keys{display:none}
+    #sheet{padding:44px 20px 28px}
+    #grid{grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:8px}
+  }
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://onthegroundproductions.com/matt-cardle-booklet#webpage", "url": "https://onthegroundproductions.com/matt-cardle-booklet", "name": "Matt Cardle, Intimate & Live | Live music photo booklet", "description": "Matt Cardle, Intimate & Live: a 28-page photo booklet by On The Ground Productions.", "inLanguage": "en-GB", "isPartOf": {"@id": "https://onthegroundproductions.com/#website"}, "primaryImageOfPage": {"@type": "ImageObject", "url": "https://onthegroundproductions.com/matt-cardle/img/cover-1000.jpg"}, "mainEntity": {"@id": "https://onthegroundproductions.com/matt-cardle-booklet#booklet"}}, {"@type": "CreativeWork", "@id": "https://onthegroundproductions.com/matt-cardle-booklet#booklet", "name": "Matt Cardle, Intimate & Live", "genre": "Live music photography", "numberOfPages": 28, "image": "https://onthegroundproductions.com/matt-cardle/img/cover-1000.jpg", "creator": {"@id": "https://onthegroundproductions.com/#org"}, "about": {"@type": "Person", "name": "Matt Cardle"}}]}</script>
+</head>
+<body>
+<h1 style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap">Matt Cardle, Intimate &amp; Live: photo booklet</h1>
+
+<div id="stage"></div>
+<div id="vignette"></div>
+
+<div class="zone" id="zprev"></div>
+<div class="zone" id="znext"></div>
+
+<div class="chrome" id="title"><b>Matt Cardle</b> <span>— Intimate &amp; Live · 28pp Booklet</span></div>
+<div class="chrome" id="credit">Music Photography</div>
+<div class="chrome" id="counter"><b id="cnum">01</b><i> / 14</i></div>
+<div class="chrome" id="keys">
+  <span><kbd>← →</kbd>Navigate</span>
+  <span><kbd>G</kbd>Contact sheet</span>
+  <span><kbd>F</kbd>Fullscreen</span>
+</div>
+<div id="progress"></div>
+
+<div id="sheet">
+  <h2>Contact sheet — 14 spreads <span style="color:rgba(214,206,192,.28);margin-left:14px">Esc to close</span></h2>
+  <div id="grid"></div>
+</div>
+
+<script>
+const SPREADS = [
+"/assets/img/matt-cardle-booklet/spread-01.webp",
+"/assets/img/matt-cardle-booklet/spread-02.webp",
+"/assets/img/matt-cardle-booklet/spread-03.webp",
+"/assets/img/matt-cardle-booklet/spread-04.webp",
+"/assets/img/matt-cardle-booklet/spread-05.webp",
+"/assets/img/matt-cardle-booklet/spread-06.webp",
+"/assets/img/matt-cardle-booklet/spread-07.webp",
+"/assets/img/matt-cardle-booklet/spread-08.webp",
+"/assets/img/matt-cardle-booklet/spread-09.webp",
+"/assets/img/matt-cardle-booklet/spread-10.webp",
+"/assets/img/matt-cardle-booklet/spread-11.webp",
+"/assets/img/matt-cardle-booklet/spread-12.webp",
+"/assets/img/matt-cardle-booklet/spread-13.webp",
+"/assets/img/matt-cardle-booklet/spread-14.webp"
+];
+const THUMBS  = [
+"/assets/img/matt-cardle-booklet/thumb-01.webp",
+"/assets/img/matt-cardle-booklet/thumb-02.webp",
+"/assets/img/matt-cardle-booklet/thumb-03.webp",
+"/assets/img/matt-cardle-booklet/thumb-04.webp",
+"/assets/img/matt-cardle-booklet/thumb-05.webp",
+"/assets/img/matt-cardle-booklet/thumb-06.webp",
+"/assets/img/matt-cardle-booklet/thumb-07.webp",
+"/assets/img/matt-cardle-booklet/thumb-08.webp",
+"/assets/img/matt-cardle-booklet/thumb-09.webp",
+"/assets/img/matt-cardle-booklet/thumb-10.webp",
+"/assets/img/matt-cardle-booklet/thumb-11.webp",
+"/assets/img/matt-cardle-booklet/thumb-12.webp",
+"/assets/img/matt-cardle-booklet/thumb-13.webp",
+"/assets/img/matt-cardle-booklet/thumb-14.webp"
+];
+
+const stage = document.getElementById('stage');
+const grid  = document.getElementById('grid');
+const sheet = document.getElementById('sheet');
+const cnum  = document.getElementById('cnum');
+const prog  = document.getElementById('progress');
+let idx = 0, locked = false;
+
+SPREADS.forEach((src, i) => {
+  const d = document.createElement('div');
+  d.className = 'slide' + (i === 0 ? ' on' : '');
+  const img = document.createElement('img');
+  img.src = src; img.alt = 'Matt Cardle, Intimate & Live: booklet spread ' + (i + 1);
+  img.decoding = 'async';
+  d.appendChild(img);
+  stage.appendChild(d);
+
+  const t = document.createElement('div');
+  t.className = 'thumb' + (i === 0 ? ' cur' : '');
+  t.innerHTML = '<img src="' + THUMBS[i] + '" alt="" loading="lazy" decoding="async"><em>' + String(i + 1).padStart(2, '0') + '</em>';
+  t.addEventListener('click', () => { go(i); closeSheet(); });
+  grid.appendChild(t);
+});
+
+const slides = [...document.querySelectorAll('.slide')];
+const thumbs = [...document.querySelectorAll('.thumb')];
+
+function go(n){
+  n = Math.max(0, Math.min(SPREADS.length - 1, n));
+  if (n === idx) return;
+  slides[idx].classList.remove('on');
+  thumbs[idx].classList.remove('cur');
+  idx = n;
+  slides[idx].classList.add('on');
+  thumbs[idx].classList.add('cur');
+  cnum.textContent = String(idx + 1).padStart(2, '0');
+  prog.style.width = ((idx + 1) / SPREADS.length * 100) + '%';
+  poke();
+}
+const next = () => go(idx + 1);
+const prev = () => go(idx - 1);
+
+/* ---- input ---- */
+document.getElementById('znext').addEventListener('click', next);
+document.getElementById('zprev').addEventListener('click', prev);
+
+addEventListener('keydown', e => {
+  const k = e.key;
+  if (k === 'ArrowRight' || k === 'ArrowDown' || k === ' ' || k === 'PageDown'){ e.preventDefault(); next(); }
+  else if (k === 'ArrowLeft' || k === 'ArrowUp' || k === 'PageUp'){ e.preventDefault(); prev(); }
+  else if (k === 'Home'){ e.preventDefault(); go(0); }
+  else if (k === 'End'){ e.preventDefault(); go(SPREADS.length - 1); }
+  else if (k === 'g' || k === 'G'){ sheet.classList.contains('on') ? closeSheet() : openSheet(); }
+  else if (k === 'Escape'){ closeSheet(); }
+  else if (k === 'f' || k === 'F'){
+    document.fullscreenElement ? document.exitFullscreen() : document.documentElement.requestFullscreen().catch(()=>{});
+  }
+  poke();
+});
+
+/* wheel / trackpad advances instead of scrolling */
+let wheelLock = 0;
+addEventListener('wheel', e => {
+  if (sheet.classList.contains('on')) return;
+  e.preventDefault();
+  const now = performance.now();
+  if (now - wheelLock < 480) return;
+  if (Math.abs(e.deltaY) < 8 && Math.abs(e.deltaX) < 8) return;
+  wheelLock = now;
+  (e.deltaY > 0 || e.deltaX > 0) ? next() : prev();
+}, { passive:false });
+
+/* touch swipe */
+let tx = 0, ty = 0;
+addEventListener('touchstart', e => { tx = e.touches[0].clientX; ty = e.touches[0].clientY; poke(); }, { passive:true });
+addEventListener('touchend', e => {
+  if (sheet.classList.contains('on')) return;
+  const dx = e.changedTouches[0].clientX - tx, dy = e.changedTouches[0].clientY - ty;
+  if (Math.abs(dx) > 45 && Math.abs(dx) > Math.abs(dy)) dx < 0 ? next() : prev();
+}, { passive:true });
+
+/* ---- contact sheet ---- */
+function openSheet(){ sheet.classList.add('on'); thumbs[idx].scrollIntoView({block:'nearest'}); }
+function closeSheet(){ sheet.classList.remove('on'); }
+
+/* ---- auto-hide chrome ---- */
+let hideT;
+function poke(){
+  document.body.classList.remove('hide-ui');
+  clearTimeout(hideT);
+  hideT = setTimeout(() => {
+    if (!sheet.classList.contains('on')) document.body.classList.add('hide-ui');
+  }, 2600);
+}
+addEventListener('mousemove', poke);
+addEventListener('click', poke);
+poke();
+
+/* kill any residual scrolling */
+addEventListener('scroll', () => scrollTo(0,0), { passive:true });
+addEventListener('dragstart', e => e.preventDefault());
+addEventListener('contextmenu', e => { if (e.target.tagName === 'IMG') e.preventDefault(); });
+
+prog.style.width = (1 / SPREADS.length * 100) + '%';
+</script>
+</body>
+</html>

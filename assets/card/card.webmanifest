@@ -1,0 +1,21 @@
+{
+  "name": "Marcus Vallance \u00b7 On the Ground",
+  "short_name": "Marcus \u00b7 OTG",
+  "start_url": "/card?me",
+  "scope": "/card",
+  "display": "standalone",
+  "background_color": "#111111",
+  "theme_color": "#111111",
+  "icons": [
+    {
+      "src": "/assets/card/card-icon-180.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/card/card-icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
